@@ -1,3 +1,4 @@
+import pathlib
 """Query Polish test-deploy checks. Local: QP_PORT=28765 python3 run_tests.py   Live: QP_BASE=https://auberga-oak.github.io/querypolish-site python3 run_tests.py
 Every request leaving the site origin is aborted; the Web3Forms request is intercepted (aborted or answered by a local mock). Nothing is sent."""
 import json, re, sys, os, threading, http.server, socketserver, urllib.request
@@ -59,7 +60,7 @@ with sync_playwright() as pw:
                     ok('contact@' not in src,f'{path}: no contact@ address')
                     ok(not re.search(r'not for (shops|restaurants)|inte för butiker',txt,re.I),f'{path}: no "not for shops or restaurants"')
                     ok(not re.search(r'every (week)?day|varje vardag|daily change',txt,re.I),f'{path}: no daily-change subscription wording')
-                    ok('12 months' not in txt and 'stores nothing' not in txt.lower(),f'{path}: no "12 months" / "stores nothing"')
+                    ok('stores nothing' not in txt.lower() and '7 days and 3 years' not in txt,f'{path}: no "stores nothing" / no retention range')
                     ok(not re.search(r'\bwe\b[^.]{0,30}\b(put|ask|check|test|run)\b[^.]{0,60}\b(ChatGPT|Perplexity|AI Overviews|AI tools?)|answers? (mention|name|include)s?\b|whether the answers|does the (AI )?answer',txt,re.I),f'{path}: no claim that we check AI answers')
                     ok('keeps it for 30 days' not in txt,f'{path}: no unverified 30-day retention claim')
                     ok(len(re.findall(r'reads? (every|the) report',txt,re.I))<=1,f'{path}: report review mentioned at most once')
@@ -96,6 +97,9 @@ with sync_playwright() as pw:
         ok('add us as a user in Google Search Console and Google Analytics. You never share a password.' in t,'home: Zinsser GSC/GA4 line')
         ok('This page uses no cookies or analytics.' in t,'home: storage line present')
         ok('Your Google Business Profile, if we can find one: categories,' in t,'home: Zinsser GBP edit')
+        ok('Web3Forms, which keeps it for 1 year and then deletes it.' in t,'home: Web3Forms retention 1 year')
+        pv=pathlib.Path(__file__).resolve().parent.parent.joinpath('docs/privacy/index.html').read_text()
+        ok('Web3Forms keeps it for 1 year and then deletes it.' in pv and 'We keep your answers and the report for 12 months after we send it, then delete them.' in pv,'privacy: Web3Forms 1 year + our 12 months')
     posts=[]
     def backend(route): posts.append(route.request.post_data); route.abort()
     p.route('https://api.web3forms.com/**',backend)

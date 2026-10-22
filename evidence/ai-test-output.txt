@@ -47,7 +47,7 @@ PASS /: no price / subscription text
 PASS /: no contact@ address
 PASS /: no "not for shops or restaurants"
 PASS /: no daily-change subscription wording
-PASS /: no "12 months" / "stores nothing"
+PASS /: no "stores nothing" / no retention range
 PASS /: no claim that we check AI answers
 PASS /: no unverified 30-day retention claim
 PASS /: report review mentioned at most once
@@ -64,7 +64,7 @@ PASS /thanks/: no price / subscription text
 PASS /thanks/: no contact@ address
 PASS /thanks/: no "not for shops or restaurants"
 PASS /thanks/: no daily-change subscription wording
-PASS /thanks/: no "12 months" / "stores nothing"
+PASS /thanks/: no "stores nothing" / no retention range
 PASS /thanks/: no claim that we check AI answers
 PASS /thanks/: no unverified 30-day retention claim
 PASS /thanks/: report review mentioned at most once
@@ -81,7 +81,7 @@ PASS /privacy/: no price / subscription text
 PASS /privacy/: no contact@ address
 PASS /privacy/: no "not for shops or restaurants"
 PASS /privacy/: no daily-change subscription wording
-PASS /privacy/: no "12 months" / "stores nothing"
+PASS /privacy/: no "stores nothing" / no retention range
 PASS /privacy/: no claim that we check AI answers
 PASS /privacy/: no unverified 30-day retention claim
 PASS /privacy/: report review mentioned at most once
@@ -98,7 +98,7 @@ PASS /no-such-page/: no price / subscription text
 PASS /no-such-page/: no contact@ address
 PASS /no-such-page/: no "not for shops or restaurants"
 PASS /no-such-page/: no daily-change subscription wording
-PASS /no-such-page/: no "12 months" / "stores nothing"
+PASS /no-such-page/: no "stores nothing" / no retention range
 PASS /no-such-page/: no claim that we check AI answers
 PASS /no-such-page/: no unverified 30-day retention claim
 PASS /no-such-page/: report review mentioned at most once
@@ -135,6 +135,8 @@ PASS home: "Henrik reads every report before it is sent." exactly once
 PASS home: Zinsser GSC/GA4 line
 PASS home: storage line present
 PASS home: Zinsser GBP edit
+PASS home: Web3Forms retention 1 year
+PASS privacy: Web3Forms 1 year + our 12 months
 PASS empty submit blocked, invalid=['Consent', 'Website', 'email']
 PASS status message shown on invalid
 PASS focus moved to first invalid field (Website)
@@ -176,4 +178,4 @@ PASS internal link http://127.0.0.1:28765/querypolish-site/thanks/#main -> 200
 PASS external link https://www.imy.se/ -> 200
 PASS no request left the site origin during tests: []
 
-SUMMARY: 177 pass, 0 fail
+SUMMARY: 179 pass, 0 fail
