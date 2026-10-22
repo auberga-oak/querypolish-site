@@ -2,367 +2,56 @@
  {
   "n": "access_key",
   "t": "hidden",
-  "r": false,
-  "branch": null
+  "r": false
  },
  {
   "n": "subject",
   "t": "hidden",
-  "r": false,
-  "branch": null
+  "r": false
  },
  {
   "n": "from_name",
   "t": "hidden",
-  "r": false,
-  "branch": null
+  "r": false
  },
  {
   "n": "redirect",
   "t": "hidden",
-  "r": false,
-  "branch": null
+  "r": false
  },
  {
   "n": "botcheck",
   "t": "checkbox",
-  "r": false,
-  "branch": null
- },
- {
-  "n": "business_type",
-  "t": "radio",
-  "r": true,
-  "branch": null
- },
- {
-  "n": "business_type",
-  "t": "radio",
-  "r": false,
-  "branch": null
- },
- {
-  "n": "business_type",
-  "t": "radio",
-  "r": false,
-  "branch": null
- },
- {
-  "n": "Business name",
-  "t": "text",
-  "r": true,
-  "branch": null
- },
- {
-  "n": "Owner name",
-  "t": "text",
-  "r": false,
-  "branch": null
- },
- {
-  "n": "Year founded",
-  "t": "number",
-  "r": false,
-  "branch": null
- },
- {
-  "n": "Team size",
-  "t": "select-one",
-  "r": false,
-  "branch": null
- },
- {
-  "n": "Target customer",
-  "t": "textarea",
-  "r": false,
-  "branch": null
- },
- {
-  "n": "Google Business Profile URL",
-  "t": "url",
-  "r": false,
-  "branch": "local_listing"
- },
- {
-  "n": "Address",
-  "t": "text",
-  "r": false,
-  "branch": "local_listing"
- },
- {
-  "n": "Address or service area",
-  "t": "text",
-  "r": false,
-  "branch": "local_no_listing"
- },
- {
-  "n": "Phone",
-  "t": "tel",
-  "r": false,
-  "branch": "local_listing local_no_listing"
- },
- {
-  "n": "Industry",
-  "t": "text",
-  "r": false,
-  "branch": "local_listing local_no_listing"
+  "r": false
  },
  {
   "n": "Website",
   "t": "url",
-  "r": false,
-  "branch": "local_listing local_no_listing"
+  "r": true
  },
  {
-  "n": "Main service",
-  "t": "text",
-  "r": false,
-  "branch": "local_listing local_no_listing"
- },
- {
-  "n": "Other services",
+  "n": "Notes",
   "t": "textarea",
-  "r": false,
-  "branch": "local_listing local_no_listing"
- },
- {
-  "n": "Cities served",
-  "t": "textarea",
-  "r": false,
-  "branch": "local_listing local_no_listing"
- },
- {
-  "n": "Neighbourhoods",
-  "t": "textarea",
-  "r": false,
-  "branch": "local_listing"
- },
- {
-  "n": "Average job value",
-  "t": "text",
-  "r": false,
-  "branch": "local_listing local_no_listing"
- },
- {
-  "n": "Website (online)",
-  "t": "url",
-  "r": false,
-  "branch": "online_only"
- },
- {
-  "n": "What you sell",
-  "t": "textarea",
-  "r": false,
-  "branch": "online_only"
- },
- {
-  "n": "Main country",
-  "t": "text",
-  "r": false,
-  "branch": "online_only"
- },
- {
-  "n": "Main language",
-  "t": "text",
-  "r": false,
-  "branch": "online_only"
- },
- {
-  "n": "Competitor 1 name",
-  "t": "text",
-  "r": false,
-  "branch": null
- },
- {
-  "n": "Competitor 1 domain",
-  "t": "text",
-  "r": false,
-  "branch": null
- },
- {
-  "n": "Competitor 1 GBP URL",
-  "t": "url",
-  "r": false,
-  "branch": "local_listing"
- },
- {
-  "n": "Competitor 1 why they beat you",
-  "t": "textarea",
-  "r": false,
-  "branch": null
- },
- {
-  "n": "Competitor 2 name",
-  "t": "text",
-  "r": false,
-  "branch": null
- },
- {
-  "n": "Competitor 2 domain",
-  "t": "text",
-  "r": false,
-  "branch": null
- },
- {
-  "n": "Competitor 2 GBP URL",
-  "t": "url",
-  "r": false,
-  "branch": "local_listing"
- },
- {
-  "n": "Competitor 2 why they beat you",
-  "t": "textarea",
-  "r": false,
-  "branch": null
- },
- {
-  "n": "Competitor 3 name",
-  "t": "text",
-  "r": false,
-  "branch": null
- },
- {
-  "n": "Competitor 3 domain",
-  "t": "text",
-  "r": false,
-  "branch": null
- },
- {
-  "n": "Competitor 3 GBP URL",
-  "t": "url",
-  "r": false,
-  "branch": "local_listing"
- },
- {
-  "n": "Competitor 3 why they beat you",
-  "t": "textarea",
-  "r": false,
-  "branch": null
- },
- {
-  "n": "Keyword 1",
-  "t": "text",
-  "r": false,
-  "branch": null
- },
- {
-  "n": "Keyword 2",
-  "t": "text",
-  "r": false,
-  "branch": null
- },
- {
-  "n": "Keyword 3",
-  "t": "text",
-  "r": false,
-  "branch": null
- },
- {
-  "n": "Keyword 4",
-  "t": "text",
-  "r": false,
-  "branch": null
- },
- {
-  "n": "Keyword 5",
-  "t": "text",
-  "r": false,
-  "branch": null
- },
- {
-  "n": "Keywords you rank for now",
-  "t": "textarea",
-  "r": false,
-  "branch": null
- },
- {
-  "n": "Keywords you should rank for",
-  "t": "textarea",
-  "r": false,
-  "branch": null
- },
- {
-  "n": "Review service keyword",
-  "t": "text",
-  "r": false,
-  "branch": "local_listing"
- },
- {
-  "n": "Review city keyword",
-  "t": "text",
-  "r": false,
-  "branch": "local_listing"
- },
- {
-  "n": "Google reviews total",
-  "t": "number",
-  "r": false,
-  "branch": "local_listing"
- },
- {
-  "n": "Star rating",
-  "t": "number",
-  "r": false,
-  "branch": "local_listing"
- },
- {
-  "n": "New reviews per month",
-  "t": "number",
-  "r": false,
-  "branch": "local_listing"
- },
- {
-  "n": "Monthly profile views",
-  "t": "number",
-  "r": false,
-  "branch": "local_listing"
- },
- {
-  "n": "Map pack status",
-  "t": "textarea",
-  "r": false,
-  "branch": "local_listing"
- },
- {
-  "n": "Monthly website visits",
-  "t": "number",
-  "r": false,
-  "branch": null
- },
- {
-  "n": "Biggest SEO problem",
-  "t": "text",
-  "r": false,
-  "branch": null
- },
- {
-  "n": "SEO already tried",
-  "t": "textarea",
-  "r": false,
-  "branch": null
+  "r": false
  },
  {
   "n": "email",
   "t": "email",
-  "r": true,
-  "branch": null
+  "r": true
  },
  {
   "n": "report_language",
   "t": "radio",
-  "r": false,
-  "branch": null
+  "r": false
  },
  {
   "n": "report_language",
   "t": "radio",
-  "r": false,
-  "branch": null
+  "r": false
  },
  {
   "n": "Consent",
   "t": "checkbox",
-  "r": true,
-  "branch": null
+  "r": true
  }
 ]
