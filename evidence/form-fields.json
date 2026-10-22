@@ -25,227 +25,12 @@
   "r": false
  },
  {
-  "n": "Business name",
-  "t": "text",
-  "r": true
- },
- {
-  "n": "Owner name",
-  "t": "text",
-  "r": false
- },
- {
-  "n": "Address",
-  "t": "text",
-  "r": true
- },
- {
-  "n": "Phone",
-  "t": "tel",
-  "r": false
- },
- {
-  "n": "Industry",
-  "t": "text",
-  "r": true
- },
- {
   "n": "Website",
   "t": "url",
   "r": true
  },
  {
-  "n": "Google Business Profile URL",
-  "t": "url",
-  "r": true
- },
- {
-  "n": "Year founded",
-  "t": "number",
-  "r": false
- },
- {
-  "n": "Team size",
-  "t": "select-one",
-  "r": false
- },
- {
-  "n": "Main service",
-  "t": "text",
-  "r": true
- },
- {
-  "n": "Other services",
-  "t": "textarea",
-  "r": false
- },
- {
-  "n": "Main city",
-  "t": "text",
-  "r": true
- },
- {
-  "n": "Service area cities",
-  "t": "textarea",
-  "r": false
- },
- {
-  "n": "Neighbourhoods",
-  "t": "textarea",
-  "r": false
- },
- {
-  "n": "Target customer",
-  "t": "textarea",
-  "r": false
- },
- {
-  "n": "Average job value",
-  "t": "text",
-  "r": false
- },
- {
-  "n": "Keyword 1",
-  "t": "text",
-  "r": true
- },
- {
-  "n": "Keyword 2",
-  "t": "text",
-  "r": true
- },
- {
-  "n": "Keyword 3",
-  "t": "text",
-  "r": true
- },
- {
-  "n": "Keyword 4",
-  "t": "text",
-  "r": false
- },
- {
-  "n": "Keyword 5",
-  "t": "text",
-  "r": false
- },
- {
-  "n": "Keywords you rank for now",
-  "t": "textarea",
-  "r": false
- },
- {
-  "n": "Keywords you should rank for",
-  "t": "textarea",
-  "r": false
- },
- {
-  "n": "Review service keyword",
-  "t": "text",
-  "r": false
- },
- {
-  "n": "Review city keyword",
-  "t": "text",
-  "r": false
- },
- {
-  "n": "Competitor 1 name",
-  "t": "text",
-  "r": false
- },
- {
-  "n": "Competitor 1 GBP URL",
-  "t": "url",
-  "r": true
- },
- {
-  "n": "Competitor 1 domain",
-  "t": "text",
-  "r": true
- },
- {
-  "n": "Competitor 1 why they beat you",
-  "t": "textarea",
-  "r": false
- },
- {
-  "n": "Competitor 2 name",
-  "t": "text",
-  "r": false
- },
- {
-  "n": "Competitor 2 GBP URL",
-  "t": "url",
-  "r": true
- },
- {
-  "n": "Competitor 2 domain",
-  "t": "text",
-  "r": true
- },
- {
-  "n": "Competitor 2 why they beat you",
-  "t": "textarea",
-  "r": false
- },
- {
-  "n": "Competitor 3 name",
-  "t": "text",
-  "r": false
- },
- {
-  "n": "Competitor 3 GBP URL",
-  "t": "url",
-  "r": true
- },
- {
-  "n": "Competitor 3 domain",
-  "t": "text",
-  "r": true
- },
- {
-  "n": "Competitor 3 why they beat you",
-  "t": "textarea",
-  "r": false
- },
- {
-  "n": "Google reviews total",
-  "t": "number",
-  "r": false
- },
- {
-  "n": "Star rating",
-  "t": "number",
-  "r": false
- },
- {
-  "n": "New reviews per month",
-  "t": "number",
-  "r": false
- },
- {
-  "n": "Monthly profile views",
-  "t": "number",
-  "r": false
- },
- {
-  "n": "Monthly website visits",
-  "t": "number",
-  "r": false
- },
- {
-  "n": "Map pack status",
-  "t": "textarea",
-  "r": false
- },
- {
-  "n": "Biggest SEO problem",
-  "t": "text",
-  "r": false
- },
- {
-  "n": "SEO already tried",
+  "n": "Notes",
   "t": "textarea",
   "r": false
  },
@@ -253,6 +38,16 @@
   "n": "email",
   "t": "email",
   "r": true
+ },
+ {
+  "n": "report_language",
+  "t": "radio",
+  "r": false
+ },
+ {
+  "n": "report_language",
+  "t": "radio",
+  "r": false
  },
  {
   "n": "Consent",

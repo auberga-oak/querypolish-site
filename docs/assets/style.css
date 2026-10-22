@@ -35,3 +35,12 @@ input:user-invalid,select:user-invalid,textarea:user-invalid{border-color:#a3271
 .hp{position:absolute;left:-9999px;width:1px;height:1px;overflow:hidden}
 footer{text-align:center;padding:30px 20px;font-size:14px;color:#4f5f66}
 @media(max-width:600px){header{padding:14px 18px}h1{font-size:32px}.lead{font-size:18px}.grid2,.grid3{grid-template-columns:1fr}form fieldset{padding:14px 12px 4px}}
+[hidden]{display:none!important}
+.js .nojs-only{display:none}.no-js .req-js{display:none}
+.choices{display:flex;flex-direction:column;gap:10px;margin:6px 0 14px}.choices.row{flex-direction:row;gap:24px}
+.choices .check{padding:10px 12px;border:1.5px solid #cfd8d4;border-radius:6px;background:#fff;cursor:pointer}
+.choices.row .check{padding:6px 10px}
+.choices .check:has(input:checked){border-color:#1f5f73;background:#eef5f6}
+.lbl{display:block;font-weight:600;margin-bottom:4px}
+#q1 legend{font-size:19px}
+.testbanner{background:#7a2e0e;color:#fff;text-align:center;padding:10px 16px;font-weight:700;font-size:15px}

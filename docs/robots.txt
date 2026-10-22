@@ -1,3 +1,2 @@
 User-agent: *
-Allow: /
-Sitemap: https://querypolish.com/sitemap.xml
+Disallow: /

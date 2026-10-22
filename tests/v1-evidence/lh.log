@@ -1,7 +1,0 @@
-npm warn deprecated @opentelemetry/sdk-trace-base@1.30.1: Use @opentelemetry/sdk-trace package
-npm notice
-npm notice New patch version of npm available! 11.21.0 -> 11.21.1
-npm notice Changelog: https://github.com/npm/cli/releases/tag/v11.21.1
-npm notice To update run: npm install -g npm@11.21.1
-npm notice
-exit 0

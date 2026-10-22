@@ -1,15 +1,15 @@
 (function(){
   var form=document.getElementById('intake');if(!form)return;
   var status=document.getElementById('status'),btn=document.getElementById('submit');
-  form.addEventListener('invalid',function(){status.className='err';status.textContent='Please fill in the required fields marked with a star.';},true);
+  var MSG='Please fill in the required fields marked with a star.';
+  form.addEventListener('invalid',function(){status.className='err';status.textContent=MSG;},true);
   form.addEventListener('submit',function(e){
     e.preventDefault();
     status.className='';status.textContent='';
     if(!form.checkValidity()){
       form.reportValidity();
-      var bad=form.querySelector(':invalid');
-      status.className='err';
-      status.textContent='Please fill in the required fields marked with a star.';
+      var bad=form.querySelector('input:invalid,select:invalid,textarea:invalid');
+      status.className='err';status.textContent=MSG;
       if(bad)bad.focus();
       return;
     }
@@ -19,7 +19,7 @@
     fetch(form.action,{method:'POST',headers:{'Content-Type':'application/json','Accept':'application/json'},body:JSON.stringify(data)})
       .then(function(r){return r.json().then(function(j){return {ok:r.ok&&j.success!==false};});})
       .then(function(res){
-        if(res.ok){window.location.href='/thanks/';}
+        if(res.ok){window.location.href=new URL('thanks/',window.location.href).href;}
         else{throw new Error('rejected');}
       })
       .catch(function(){

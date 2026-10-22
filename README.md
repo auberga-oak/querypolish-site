@@ -94,3 +94,42 @@ No wildcard records. Source: https://docs.github.com/en/pages/configuring-a-cust
 - Repo created (empty, public): https://github.com/auberga-oak/querypolish-site. Push held for Henrik's placeholder confirmation.
 - GitHub Pages domain verification pending: TXT `_github-pages-challenge-auberga-oak.querypolish.com` = `0b9c128da44537407369e446f0534a` (sent to Warren for Spaceship).
 - Backend: Web3Forms free, receiving inbox warren.ekenberg@agentmail.to (key step: Warren).
+
+## Branch `branching-v1` (22 Oct 2026, Stockholm time): first question that branches the form
+Spec: `intake-branching-v1.md`, plus Warren's resolutions (22 Oct): competitors are optional (1–3) and the Google Business Profile links appear only for A; report language is English or Swedish, with English selected by default. **Not merged, not pushed. main is untouched at 54ca006.**
+- Code commit: `ffe565b`. The README is updated in the commit after it.
+- Tests: `cd tests && QP_PORT=28765 python3 run_tests.py`. Result: **156 pass, 0 fail** (`evidence/test-output.txt`). Nothing left the box; the backend request was aborted or answered with a local mock.
+- Form source: `tools/build_form.py` regenerates the `<form>` body in `docs/index.html`. `tools/extract_copy.py` dumps all visible text.
+- Copy diff for Zinsser: `evidence/copy-diff-branching.md` (raw: `evidence/copy-branching.udiff`).
+
+### How the form behaves
+- Q1 `business_type` (radio, required) is the first field. Its values are `local_listing`, `local_no_listing` and `online_only`.
+- Sections tagged `data-branch` show only for their answer. With JS on, the controls in hidden sections are **disabled**, so they aren't validated or submitted, and stale values from a branch the user switched away from are dropped (tested A→B, B→C, C→A). Fields marked `data-breq` become required only while their section is visible.
+- Required in every branch: business_type, Business name, email, Consent. Report language (`report_language`) defaults to English.
+- Required for one branch only: A `Google Business Profile URL`; B `Address or service area`; C `Website (online)`.
+- **No-JS fallback (chosen):** every section is shown and enabled, and only the common fields are required. Each branch section carries a "Fill in this part if you picked X above." note, and the branch-required fields say "(required if this is your answer above)" but aren't enforced. The native POST then includes the other branches' fields as **empty** values (tested). The team should read `business_type` first.
+
+### Which fields stay where
+| Field(s) | A | B | C | Reason |
+|---|---|---|---|---|
+| Business name (req), Owner's name, Year founded, Team size, Your best customer | ✓ | ✓ | ✓ | Prompt 0 context for everyone |
+| Google Business Profile link (req), Full address | ✓ | | | GBP prompts 1–8, 13, 18, 19 |
+| Business address or service area (req) | | ✓ | | Spec |
+| Phone, Industry, Website, Main service, Other services, Cities you serve, Average job value | ✓ | ✓ | | Local services and market (spec: main service, cities, website) |
+| Neighbourhoods | ✓ | | | Used only by GBP prompts 5–8 |
+| Website (req), What you sell, Main country, Main language | | | ✓ | Spec |
+| Competitor 1–3: name, website domain, why they beat you (all optional) | ✓ | ✓ | ✓ | Warren |
+| Competitor 1–3 Google Business Profile link (optional) | ✓ | | | Warren |
+| Keywords 1–5, searches you rank for / should rank for (all optional) | ✓ | ✓ | ✓ | Prompts 9, 16 and 17 run in every branch |
+| Review service/city words | ✓ | | | Prompt 4, reviews on the profile |
+| Google reviews, rating, new reviews per month, profile views, Maps top 3 | ✓ | | | Only meaningful with a listing |
+| Monthly website visits, biggest search problem, what you've tried | ✓ | ✓ | ✓ | Prompt 0 |
+| Email (req), Report language (English default), Consent (req) | ✓ | ✓ | ✓ | Spec |
+
+### Conflicts with Warren's original brief (for the record)
+1. The brief required 3 competitors, each a GBP URL plus a domain. **Resolved by Warren (22 Oct):** competitors are optional, and the GBP link is asked only in A.
+2. The brief required the GBP link, full address, website, keywords 1–3, main service, main city and industry for everyone. These are now branch-specific or optional, following the spec. Main city is merged into "Cities you serve".
+3. The brief's product framing is a "local-SEO audit"; branch C is online only. The title and H1 still say "local search". Left unchanged, for Warren and Zinsser to decide.
+4. "Name" in the spec's "All: name, email" is read as **Business name (required)**. Owner's name stays optional.
+5. The spec says "(optional, we'll find them if blank)" for A's competitors. The site makes **no** promise to find them. The hint is Warren's "the more you name, the better the audit". Add the promise only if the team commits to it.
+6. The report can be in Swedish, but the site copy stays English, and the confirmation and thanks pages are English.

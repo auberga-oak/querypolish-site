@@ -1,23 +1,23 @@
 ==================== docs/index.html
-TITLE: Query Polish: a free local search audit
-META DESCRIPTION: A free audit of how your business shows up in Google Maps and local search, compared with three competitors you choose. The report comes by email.
-Skip to content 
+TITLE: Query Polish: a free search audit for your business
+META DESCRIPTION: A free audit of how your business shows up in Google search and Google Maps, compared with your closest competitors. The report comes by email.
+Test version. This site is being tested and isn't open for requests yet. Skip to content 
 Query PolishRequest the audit   
 
-# A free audit of how your business shows up in local search 
-Tell us about your business and three competitors. We compare your Google Business Profile and website with theirs for the searches you care about, and email you a written report. 
+# A free audit of how your business shows up in search 
+Tell us your website. We compare your Google Business Profile, if you have one, and your website with your closest competitors for the searches your customers use, and email you a written report. 
 Request the audit   
 
 ## What the audit covers  
-- Your Google Business Profile: categories, attributes, services, description, photos and posts, set against what your competitors do. 
-- Your reviews: how many you have, how often new ones come in, what customers mention, and how your competitors' reviews differ. 
-- Your website: whether your main service pages match the searches you named, and which local topics your competitors cover that you don't. 
-- Your business details: whether your name, address and phone number match across the web.  
+- Your Google Business Profile: categories, attributes, services, description, photos and posts, set against what your competitors do. If you don't have a profile yet, the report starts with how to set one up. 
+- Your Google reviews (if you have a profile): how many you have, how often new ones come in, what customers mention, and how your competitors' reviews differ. 
+- Your website: whether your main service pages match the searches your customers use, and which topics your competitors cover that you don't. 
+- Your business details: whether your name, address and phone number match across the web. For online-only businesses, we check your profiles on directories, social sites and marketplaces instead.  
 Each finding comes with a suggested fix and a note on how much it's likely to matter.   
 
 ## How it works  
-- Fill in the form below. It takes about ten minutes. Only the fields marked with a star are required. 
-- We look at public information: your profile, your website, and the three competitors you name. 
+- Fill in the form below. You only need to give us your website and your email address. 
+- We look at public information: your profile if you have one, your website, and your closest competitors. 
 - We email the report to the address you give us.  
 We never ask for passwords or logins. The audit uses only what you tell us and what anyone can see on Google and on the web.   
 
@@ -26,138 +26,35 @@ We use what you send only to prepare your audit and email it to you. We don't se
 
 ## Request your free audit 
 Fields marked * are required.  
-[hidden access_key=WEB3FORMS_ACCESS_KEY] 
+[hidden access_key=c9f5ef0c-dc1b-4ead-8727-fabec3abdc98] 
 [hidden subject=New Query Polish audit request] 
 [hidden from_name=Query Polish intake form] 
-[hidden redirect=https://querypolish.com/thanks/] 
+[hidden redirect=https://auberga-oak.github.io/querypolish-site/thanks/] 
 
 Leave this empty 
 
-### Your business
+### Your business 
 
-Business name *Exactly as it appears on your Google Business Profile.
+Website address * [placeholder: https://] 
 
-Owner's name (optional)
+Anything else you'd like us to know (optional)  
 
-Full address *Include suite or unit number. Write it as it appears on your profile.
+### Where to send the report 
 
-Phone number (optional)As shown on your profile.
+Your email address * 
+Report language
 
-Industry or type of business * [placeholder: e.g. plumber, dental clinic]
+English
+Swedish 
 
-Website address * [placeholder: https://]
-
-Your Google Business Profile link *Open your listing in Google Maps and copy the share link. [placeholder: https://]
-
-Year founded (optional)
-
-Team size (optional)
-Choose one
-Solo
-Small team
-Large team 
-
-### Services and market
-
-Main service * [placeholder: e.g. emergency plumbing]
-
-Other services (optional)Up to 5, one per line.
-
-Main city *
-
-Other cities you serve (optional)Up to 5, one per line.
-
-Neighbourhoods or areas (optional)Up to 3, one per line. These are the parts of town where you most want to be found.
-
-Your best customer (optional)Who they are, in a sentence or two.
-
-Average job value (optional)Roughly, with currency, e.g. 4,000 SEK. 
-
-### Keywords
-The searches you most want to show up for, such as "plumber in Uppsala". Three are required, five are better.
-
-Keyword 1 *
-
-Keyword 2 *
-
-Keyword 3 *
-
-Keyword 4 (optional)
-
-Keyword 5 (optional)
-
-Searches you already show up for (optional)If you know them.
-
-Searches you should show up for but don't (optional)
-
-Service word for reviews (optional)The service you'd like customers to mention in reviews.
-
-City word for reviews (optional)The place you'd like customers to mention in reviews. 
-
-### Three competitors
-The three businesses that most often show up above you in search. We need each one's Google Business Profile link and website.
-
-### Competitor 1
-
-Name (optional)
-
-Google Business Profile link * [placeholder: https://]
-
-Website domain * [placeholder: example.com]
-
-Why they beat you, if you know (optional)
-
-### Competitor 2
-
-Name (optional)
-
-Google Business Profile link * [placeholder: https://]
-
-Website domain * [placeholder: example.com]
-
-Why they beat you, if you know (optional)
-
-### Competitor 3
-
-Name (optional)
-
-Google Business Profile link * [placeholder: https://]
-
-Website domain * [placeholder: example.com]
-
-Why they beat you, if you know (optional) 
-
-### Your current numbers (all optional)
-Fill in what you know. Leave the rest blank.
-
-Google reviews (optional)
-
-Star rating (optional)
-
-New reviews a month (optional)
-
-Monthly views of your Google profile (optional)
-
-Monthly website visits (optional)
-
-Google Maps top 3 (optional)Which searches you show up in the top 3 for, and which you don't.
-
-Your biggest search problem, in one sentence (optional)
-
-What you've already tried (optional)Agency, do-it-yourself, tools. What worked and what didn't. 
-
-### Where to send the report
-
-Your email address *
-
-I agree that Finansium AB may use the information in this form to prepare my audit and email it to me, as described in the privacy note. * 
+I agree that Finansium AB may use the information in this form to prepare my audit and email it to me, as described in the privacy note. *  
 Send my details 
 
 Privacy · Query Polish is run by Finansium AB, Stockholm, Sweden. © 2026 Finansium AB
 
 ==================== docs/thanks/index.html
 TITLE: Thank you: Query Polish
-Skip to content 
+Test version. This site is being tested and isn't open for requests yet. Skip to content 
 Query PolishRequest the audit   
 
 # Thank you 
@@ -168,12 +65,12 @@ Privacy · Query Polish is run by Finansium AB, Stockholm, Sweden. © 2026 Finan
 
 ==================== docs/privacy/index.html
 TITLE: Privacy: Query Polish
-Skip to content 
+Test version. This site is being tested and isn't open for requests yet. Skip to content 
 Query PolishRequest the audit   
 
 # Privacy 
 Who is responsible. Finansium AB is the data controller for Query Polish. Contact: henrik.ekenberg@finansium.se. 
-What we collect. What you type into the audit form: details about your business, your services and market, the searches you want to show up for, three competitors, any numbers you choose to share, and your email address. We never ask for passwords or logins. 
+What we collect. What you type into the audit form: your website address, your email address, the language you want the report in, and anything else you choose to tell us. We never ask for passwords or logins. 
 Why. Only to prepare your audit and email the report to you. The legal basis is your consent, which you give by ticking the box on the form. We don't sell your information, share it for marketing, or add you to a mailing list. 
 Who processes it. Web3Forms (web3forms.com) receives the form and forwards it to us by email, as our data processor. 
 How long. We keep your answers and the report for 12 months after we send it, then delete them. You can ask us to delete them sooner. 
@@ -184,7 +81,7 @@ Query Polish is run by Finansium AB, Stockholm, Sweden. © 2026 Finansium AB
 
 ==================== docs/404.html
 TITLE: Page not found: Query Polish
-Skip to content 
+Test version. This site is being tested and isn't open for requests yet. Skip to content 
 Query PolishRequest the audit   
 
 # Page not found 
