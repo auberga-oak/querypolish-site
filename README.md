@@ -84,7 +84,7 @@ Needed at Spaceship (after the repo has querypolish.com set as its custom domain
 No wildcard records. Source: https://docs.github.com/en/pages/configuring-a-custom-domain-for-your-github-pages-site/managing-a-custom-domain-for-your-github-pages-site and https://docs.github.com/en/pages/configuring-a-custom-domain-for-your-github-pages-site/verifying-your-custom-domain-for-github-pages
 
 ## Commits
-- Local only (no remote): see `git log` in /workspace/querypolish.
+- Local only (no remote): `1f98085` Query Polish v1: static intake site, tests, evidence. The README edit adding this hash is committed on top of it.
 - Live: none yet.
 ## Submission location
 - Not set up yet (proposed: Web3Forms -> team AgentMail inbox).
