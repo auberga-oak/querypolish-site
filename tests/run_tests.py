@@ -85,7 +85,7 @@ with sync_playwright() as pw:
     body=json.loads(posts[0]) if posts else {}
     json.dump(body,open(f'{EV}/intercepted-payload-abort.json','w'),indent=1)
     ok(all(body.get(k)==v for k,v in FILL.items()) and body.get('Consent')=='Yes','payload carries every required value + consent')
-    ok(body.get('access_key')=='WEB3FORMS_ACCESS_KEY' and 'botcheck' not in body, 'payload has placeholder key, honeypot unchecked')
+    ok(body.get('access_key')=='c9f5ef0c-dc1b-4ead-8727-fabec3abdc98' and 'botcheck' not in body, 'payload has Web3Forms key, honeypot unchecked')
     st=p.inner_text('#status'); ok('not sent' in st and p.url.endswith('/'), 'aborted request -> error shown, stays on page: '+st)
     p.screenshot(path=f'{EV}/submit-aborted-1280.png')
     # 5. mocked success (fulfilled locally, nothing leaves the box)
