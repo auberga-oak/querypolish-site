@@ -37,6 +37,8 @@ Owner: Finansium AB. Engineering: Kent Beck. Updated 22 Oct 2026, 16:50 Stockhol
 - branching-v1: ffe565b, 8383563, 348cdde, b56f60e, ea93552
 - simple-test: 6dd43a7. Merged into main as **debc9be** (first deploy).
 - The README and live evidence are committed on top of debc9be (see `git log`).
+- fcf600d: README and live evidence. 4a10f26: receiving inbox address removed from tracked files; Zinsser edit "Your Google Business Profile, if we can find one: categories," (live, verified 22 Oct 16:58 CEST; live render checks 126/126).
+- Branch `copy-ai-v1` (7fcb045, local only, NOT pushed or deployed): AI-answer copy draft, see `evidence/copy-diff-ai.md` on that branch.
 
 ## Known issues and flags
 - The public repo history includes `tests/v1-evidence/` (scraped third-party pages from earlier Luck Habits research) and `backups/`. They were removed from the tree in 6dd43a7 but are still in history, and older commits show the receiving inbox address. It was removed from all current files on main on 22 Oct. Rewriting history needs a force push, so I haven't done it.
