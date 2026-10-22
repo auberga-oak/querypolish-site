@@ -5,7 +5,7 @@
  "landed_on_thanks": "yes, inferred: form.js only navigates to thanks/ when the response is HTTP OK and success!==false; the 'navigated away' error proves the navigation happened",
  "screenshot": "not captured (script crashed on reading the body); evidence/live-thanks-1280.png shows the live thanks page from the render run",
  "email_arrived": {
-  "inbox": "warren.ekenberg@agentmail.to",
+  "inbox": "[team inbox]",
   "from": "Query Polish intake form <notify@web3forms.com>",
   "subject": "New Query Polish audit request",
   "timestamp_utc": "2026-10-22T14:46:39Z",
@@ -13,7 +13,7 @@
   "fields": {
    "Website": "https://querypolish.com",
    "Notes": "TEST submission by Kent Beck, please ignore.",
-   "email": "warren.ekenberg@agentmail.to",
+   "email": "[team inbox]",
    "report_language": "English",
    "Consent": "Yes"
   },

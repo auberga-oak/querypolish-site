@@ -13,19 +13,18 @@ Owner: Finansium AB. Engineering: Kent Beck. Updated 22 Oct 2026, 16:50 Stockhol
 - Backend: Web3Forms, key `c9f5ef0c-dc1b-4ead-8727-fabec3abdc98` (public by design). Redirect for no-JS posts: https://auberga-oak.github.io/querypolish-site/thanks/
 
 ## Where submissions land
-- Email to **warren.ekenberg@agentmail.to** (from `Query Polish intake form <notify@web3forms.com>`, subject "New Query Polish audit request").
-- The **Web3Forms dashboard** for that key (free plan: 30-day history).
+- **The team's AgentMail inbox and the Web3Forms dashboard.** Mail comes from `Query Polish intake form <notify@web3forms.com>` with the subject "New Query Polish audit request". The dashboard keeps 30 days of history on the free plan.
 
 ## Live end-to-end test (1 real submission, 1 attempt)
-- Submitted at about **16:46:38–39 CEST, 22 Oct 2026**, through the live page in headless Chrome. Website https://querypolish.com, email warren.ekenberg@agentmail.to, notes "TEST submission by Kent Beck, please ignore.", consent ticked.
-- Result: the page navigated to `thanks/`. form.js only does that on an OK response with `success` not false. The script failed to save the response body and the screenshot because the navigation came first (fixed in `tests/live_submit.py`, which must not be re-run without a go-ahead).
-- **The email arrived at 16:46:39 CEST** in warren.ekenberg@agentmail.to (thread `09de4a82-f5b1-43bb-8b0b-bf67942cf558`): Website, Notes, email, report_language=English, Consent=Yes. I only read it; nothing was sent, replied to or forwarded.
+- Submitted at about **16:46:38–39 CEST, 22 Oct 2026**, through the live page in headless Chrome. Website https://querypolish.com, email [team inbox], notes "TEST submission by Kent Beck, please ignore.", consent ticked.
+- Result: the page navigated to `thanks/`. form.js only does that on an OK response with `success` not false. The script failed to save the response body and the screenshot because the navigation came first (fixed in `tests/live_submit.py`, which must not be re-run without a go-ahead; it reads the inbox address from `QP_LIVE_EMAIL`, which isn't committed).
+- **The email arrived at 16:46:39 CEST** in [team inbox] (thread `09de4a82-f5b1-43bb-8b0b-bf67942cf558`): Website, Notes, email, report_language=English, Consent=Yes. I only read it; nothing was sent, replied to or forwarded.
 - Record: `evidence/live-submit-result.json`.
 
 ## Tests
 - `cd tests && QP_PORT=28765 python3 run_tests.py` serves `docs/` locally under `/querypolish-site/`. Result: **126 pass, 0 fail** (`evidence/test-output.txt`).
 - `QP_BASE=https://auberga-oak.github.io/querypolish-site python3 run_tests.py` runs the same checks against the live site. Result: **126 pass, 0 fail** (`evidence/live-test-output.txt`).
-- Both runs intercept the backend request (abort or a local mock), so the test runs send nothing.
+- Both runs intercept the backend request (abort or a local mock), so the test runs send nothing. The test email defaults to `test@example.com` (override with `QP_TEST_EMAIL`).
 - Coverage: the 3 required fields, banner and noindex on every page, the aborted submit and its payload, JS off, 360/390/1280 px (plus @2x), console errors, contrast (min 4.61:1), links and anchors, no root-absolute paths outside the subpath, robots/sitemap/CNAME.
 
 ## Evidence
@@ -40,5 +39,5 @@ Owner: Finansium AB. Engineering: Kent Beck. Updated 22 Oct 2026, 16:50 Stockhol
 - The README and live evidence are committed on top of debc9be (see `git log`).
 
 ## Known issues and flags
-- The public repo history includes `tests/v1-evidence/` (scraped third-party pages from earlier Luck Habits research) and `backups/`. They were removed from the tree in 6dd43a7 but are still in history, and the evidence JSON shows the receiving inbox address. Rewriting history needs a force push, so I haven't done it.
+- The public repo history includes `tests/v1-evidence/` (scraped third-party pages from earlier Luck Habits research) and `backups/`. They were removed from the tree in 6dd43a7 but are still in history, and older commits show the receiving inbox address. It was removed from all current files on main on 22 Oct. Rewriting history needs a force push, so I haven't done it.
 - The box can't reach plain HTTP (port 80), so I didn't verify the HTTP to HTTPS redirect from here. HTTPS returns 200.

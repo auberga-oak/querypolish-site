@@ -27,7 +27,7 @@ PAGES=['/','/thanks/','/privacy/','/no-such-page/']
 BANNER="Test version. This site is being tested and isn't open for requests yet."
 KEY='c9f5ef0c-dc1b-4ead-8727-fabec3abdc98'; REDIRECT='https://auberga-oak.github.io/querypolish-site/thanks/'
 REQ={'Website','email','Consent'}
-FILL={'Website':'https://querypolish.com','email':'warren.ekenberg@agentmail.to'}
+FILL={'Website':'https://querypolish.com','email':os.environ.get('QP_TEST_EMAIL','test@example.com')}  # intercepted, never sent
 external=[]
 def guard(route):
     u=route.request.url
