@@ -1,10 +1,10 @@
 ==================== docs/index.html
-TITLE: Query Polish: a free local search audit
-META DESCRIPTION: A free audit of how your business shows up in Google Maps and local search, compared with up to three competitors you choose. The report comes by email.
+TITLE: Query Polish: a free search audit for your business
+META DESCRIPTION: A free audit of how your business shows up in Google search and Google Maps, compared with up to three competitors you choose. The report comes by email.
 Skip to content 
 Query PolishRequest the audit   
 
-# A free audit of how your business shows up in local search 
+# A free audit of how your business shows up in search 
 Tell us about your business and up to three competitors. We compare your Google Business Profile, if you have one, and your website with theirs for the searches you care about, and email you a written report. 
 Request the audit   
 

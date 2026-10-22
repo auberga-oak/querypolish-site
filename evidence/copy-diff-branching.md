@@ -14,7 +14,7 @@ Every user-visible text change. Zinsser must re-gate each item marked **NEW** or
 | 7 | How it works, step 2 | We look at public information: your profile, your website, and the three competitors you name. | We look at public information: your profile **if you have one**, your website, and the competitors you name. | Optional profile, optional competitors |
 
 These stay as they were on purpose, so please confirm them:
-- The title "Query Polish: a free local search audit" and the H1 "A free audit of how your business shows up in local search". Both are now arguably inaccurate for branch C (online only), but changing the positioning is Warren's call, so I've flagged it rather than changed it.
+- The title "Query Polish: a free search audit for your business" and the H1 "A free audit of how your business shows up in search". Both are now arguably inaccurate for branch C (online only), but changing the positioning is Warren's call, so I've flagged it rather than changed it.
 - "It takes about ten minutes. Only the fields marked with a star are required." Still true (fewer required fields, so if anything it's quicker).
 
 ## 2. Form: new question 1 (all **NEW**)
@@ -39,7 +39,7 @@ These stay as they were on purpose, so please confirm them:
 | 16 | Legend (C) | – | **Your online business** | NEW |
 | 17 | Fields (C) | – | **Website address** * · **What you sell** (hint: **Your main products or services, in a sentence or two.**) · **Main country** (hint: **Where most of your customers are.**) · **Main language** (hint: **The language your customers search in.**) | NEW |
 | 18 | Competitors legend | Three competitors | **Competitors** (optional) | CHANGED |
-| 19 | Competitors hint | The three businesses that most often show up above you in search. We need each one's Google Business Profile link and website. | **Up to three businesses that most often show up above you in search. Each one you name gives us more to compare. Leave blank and we'll pick likely competitors from public search.** | CHANGED (Warren's requested hint) |
+| 19 | Competitors hint | The three businesses that most often show up above you in search. We need each one's Google Business Profile link and website. | **Up to three businesses that most often show up above you in search. Each one you name gives us more to compare. If you leave this blank, we'll find likely competitors in public search results.** | CHANGED (Warren's requested hint) |
 | 20 | Competitor N: Google Business Profile link / Website domain | both required *, link listed first | both optional, domain first; the link appears only for answer A | CHANGED |
 | 21 | Keywords legend | Keywords | Keywords **(all optional)** | CHANGED |
 | 22 | Keywords hint | The searches you most want to show up for, such as "plumber in Uppsala". Three are required, five are better. | The searches you most want to show up for, such as "plumber in Uppsala". **Up to five.** | CHANGED |
