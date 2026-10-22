@@ -17,7 +17,7 @@ Each finding comes with a suggested fix and a note on how much it's likely to ma
 
 ## How it works  
 - Fill in the form below. It takes about ten minutes. Only the fields marked with a star are required. 
-- We look at the public information: your profile, your website, and the three competitors you name. 
+- We look at public information: your profile, your website, and the three competitors you name. 
 - We email the report to the address you give us.  
 We never ask for passwords or logins. The audit uses only what you tell us and what anyone can see on Google and on the web.   
 
@@ -95,7 +95,7 @@ Service word for reviews (optional)The service you'd like customers to mention i
 City word for reviews (optional)The place you'd like customers to mention in reviews. 
 
 ### Three competitors
-The three businesses that show up above you most often. We need each one's Google Business Profile link and website.
+The three businesses that most often show up above you in search. We need each one's Google Business Profile link and website.
 
 ### Competitor 1
 
