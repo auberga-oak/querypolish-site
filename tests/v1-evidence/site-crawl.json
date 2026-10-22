@@ -1,0 +1,474 @@
+[
+ {
+  "url": "https://luckhabits.com/",
+  "code": "200",
+  "title": [
+   "Luck Habits: real people, real bets, one story a week"
+  ],
+  "title_len": [
+   53
+  ],
+  "desc": [
+   "One true story a week about someone who made a bet and got lucky, the luck habit behind it, and one small thing to do each day."
+  ],
+  "desc_len": [
+   127
+  ],
+  "canonical": [
+   "https://luckhabits.com/"
+  ],
+  "h1": [
+   "One true luck story a week."
+  ],
+  "ld_types": [
+   "WebSite",
+   "Organization",
+   "Person"
+  ],
+  "imgs": 8,
+  "imgs_noalt": 0,
+  "words": 524,
+  "lang": [
+   "en"
+  ],
+  "links": [
+   "#main",
+   "#signup",
+   "assets/style.css?v=20261022d",
+   "favicon.svg",
+   "https://luckhabits.com/",
+   "https://overwise.gumroad.com/l/moreluck",
+   "https://www.wweek.com/culture/2026/07/20/wilt-chamberlain-jacket-found-by-portland-teenager-sells-for-89600/",
+   "https://www.youtube.com/@OverWise-i9s",
+   "https://youtu.be/1_9WK2hC2rw",
+   "https://youtu.be/J24wsLLiGgU",
+   "https://youtu.be/LhjCIASkoPM",
+   "https://youtu.be/a2NFssrfa6I",
+   "https://youtu.be/e1Ze_Bqg_A8",
+   "https://youtu.be/gRsqkh_kTe0",
+   "https://youtu.be/ivtXEfygvws",
+   "https://youtu.be/lJ87jXLgFMU",
+   "moves/1.html",
+   "moves/10.html",
+   "moves/11.html",
+   "moves/12.html",
+   "moves/13.html",
+   "moves/14.html",
+   "moves/15.html",
+   "moves/16.html",
+   "moves/17.html",
+   "moves/18.html",
+   "moves/19.html",
+   "moves/2.html",
+   "moves/20.html",
+   "moves/21.html",
+   "moves/22.html",
+   "moves/23.html",
+   "moves/24.html",
+   "moves/25.html",
+   "moves/26.html",
+   "moves/27.html",
+   "moves/28.html",
+   "moves/29.html",
+   "moves/3.html",
+   "moves/30.html",
+   "moves/31.html",
+   "moves/32.html",
+   "moves/33.html",
+   "moves/4.html",
+   "moves/5.html",
+   "moves/6.html",
+   "moves/7.html",
+   "moves/8.html",
+   "moves/9.html",
+   "privacy.html"
+  ]
+ },
+ {
+  "url": "https://luckhabits.com/privacy.html",
+  "code": "200",
+  "title": [
+   "Privacy: Luck Habits"
+  ],
+  "title_len": [
+   20
+  ],
+  "desc": [
+   "How Luck Habits handles your email address: what we collect, why, who processes it, how long we keep it and your rights."
+  ],
+  "desc_len": [
+   120
+  ],
+  "canonical": [
+   "https://luckhabits.com/privacy.html"
+  ],
+  "h1": [
+   "Privacy"
+  ],
+  "ld_types": [],
+  "imgs": 0,
+  "imgs_noalt": 0,
+  "words": 201,
+  "lang": [
+   "en"
+  ],
+  "links": [
+   "assets/style.css",
+   "https://luckhabits.com/privacy.html",
+   "index.html",
+   "mailto:henrik.ekenberg@finansium.se"
+  ]
+ },
+ {
+  "url": "https://luckhabits.com/moves/1.html",
+  "code": "200",
+  "title": [
+   "Luck habit #1: Make more tries | Luck Habits"
+  ],
+  "title_len": [
+   44
+  ],
+  "desc": [
+   "True, sourced stories of people who got lucky by doing this: Make more tries."
+  ],
+  "desc_len": [
+   77
+  ],
+  "canonical": [
+   "https://luckhabits.com/moves/1.html"
+  ],
+  "h1": [
+   "Make more tries"
+  ],
+  "ld_types": [],
+  "imgs": 0,
+  "imgs_noalt": 0,
+  "words": 102,
+  "lang": [
+   "en"
+  ],
+  "links": [
+   "../",
+   "../#signup",
+   "../assets/style.css",
+   "../favicon.svg",
+   "2.html",
+   "https://luckhabits.com/moves/1.html",
+   "https://youtu.be/a2NFssrfa6I",
+   "https://youtu.be/ivtXEfygvws",
+   "https://youtu.be/lJ87jXLgFMU"
+  ]
+ },
+ {
+  "url": "https://luckhabits.com/moves/2.html",
+  "code": "200",
+  "title": [
+   "Luck habit #2: Kill the dead ones fast | Luck Habits"
+  ],
+  "title_len": [
+   52
+  ],
+  "desc": [
+   "True, sourced stories of people who got lucky by doing this: Kill the dead ones fast."
+  ],
+  "desc_len": [
+   85
+  ],
+  "canonical": [
+   "https://luckhabits.com/moves/2.html"
+  ],
+  "h1": [
+   "Kill the dead ones fast"
+  ],
+  "ld_types": [],
+  "imgs": 0,
+  "imgs_noalt": 0,
+  "words": 86,
+  "lang": [
+   "en"
+  ],
+  "links": [
+   "../",
+   "../#signup",
+   "../assets/style.css",
+   "../favicon.svg",
+   "1.html",
+   "3.html",
+   "https://luckhabits.com/moves/2.html",
+   "https://youtu.be/LhjCIASkoPM"
+  ]
+ },
+ {
+  "url": "https://luckhabits.com/moves/3.html",
+  "code": "200",
+  "title": [
+   "Luck habit #3: Do something when you are unsure | Luck Habits"
+  ],
+  "title_len": [
+   61
+  ],
+  "desc": [
+   "True, sourced stories of people who got lucky by doing this: Do something when you are unsure."
+  ],
+  "desc_len": [
+   94
+  ],
+  "canonical": [
+   "https://luckhabits.com/moves/3.html"
+  ],
+  "h1": [
+   "Do something when you are unsure"
+  ],
+  "ld_types": [],
+  "imgs": 0,
+  "imgs_noalt": 0,
+  "words": 113,
+  "lang": [
+   "en"
+  ],
+  "links": [
+   "../",
+   "../#signup",
+   "../assets/style.css",
+   "../favicon.svg",
+   "2.html",
+   "4.html",
+   "https://luckhabits.com/moves/3.html",
+   "https://www.businessinsider.com/microsoft-engineer-quit-big-tech-job-build-ai-startup-solo-2026-10"
+  ]
+ },
+ {
+  "url": "https://luckhabits.com/moves/4.html",
+  "code": "200",
+  "title": [
+   "Luck habit #4: Raise how often you meet people | Luck Habits"
+  ],
+  "title_len": [
+   60
+  ],
+  "desc": [
+   "True, sourced stories of people who got lucky by doing this: Raise how often you meet people."
+  ],
+  "desc_len": [
+   93
+  ],
+  "canonical": [
+   "https://luckhabits.com/moves/4.html"
+  ],
+  "h1": [
+   "Raise how often you meet people"
+  ],
+  "ld_types": [],
+  "imgs": 0,
+  "imgs_noalt": 0,
+  "words": 93,
+  "lang": [
+   "en"
+  ],
+  "links": [
+   "../",
+   "../#signup",
+   "../assets/style.css",
+   "../favicon.svg",
+   "3.html",
+   "5.html",
+   "https://luckhabits.com/moves/4.html",
+   "https://youtu.be/e1Ze_Bqg_A8"
+  ]
+ },
+ {
+  "url": "https://luckhabits.com/moves/5.html",
+  "code": "200",
+  "title": [
+   "Luck habit #5: Do the work, and tell people | Luck Habits"
+  ],
+  "title_len": [
+   57
+  ],
+  "desc": [
+   "True, sourced stories of people who got lucky by doing this: Do the work, and tell people."
+  ],
+  "desc_len": [
+   90
+  ],
+  "canonical": [
+   "https://luckhabits.com/moves/5.html"
+  ],
+  "h1": [
+   "Do the work, and tell people"
+  ],
+  "ld_types": [],
+  "imgs": 0,
+  "imgs_noalt": 0,
+  "words": 92,
+  "lang": [
+   "en"
+  ],
+  "links": [
+   "../",
+   "../#signup",
+   "../assets/style.css",
+   "../favicon.svg",
+   "4.html",
+   "6.html",
+   "https://luckhabits.com/moves/5.html",
+   "https://youtu.be/J24wsLLiGgU"
+  ]
+ },
+ {
+  "url": "https://luckhabits.com/moves/26.html",
+  "code": "200",
+  "title": [
+   "Luck habit #26: Know the field well enough to see the odd result | Luck Habits"
+  ],
+  "title_len": [
+   78
+  ],
+  "desc": [
+   "True, sourced stories of people who got lucky by doing this: Know the field well enough to see the odd result."
+  ],
+  "desc_len": [
+   110
+  ],
+  "canonical": [
+   "https://luckhabits.com/moves/26.html"
+  ],
+  "h1": [
+   "Know the field well enough to see the odd result"
+  ],
+  "ld_types": [],
+  "imgs": 0,
+  "imgs_noalt": 0,
+  "words": 130,
+  "lang": [
+   "en"
+  ],
+  "links": [
+   "../",
+   "../#signup",
+   "../assets/style.css",
+   "../favicon.svg",
+   "25.html",
+   "27.html",
+   "https://luckhabits.com/moves/26.html",
+   "https://www.sciencedaily.com/releases/2026/10/261007233136.htm"
+  ]
+ },
+ {
+  "url": "https://luckhabits.com/moves/28.html",
+  "code": "200",
+  "title": [
+   "Luck habit #28: Ask what the setback made possible | Luck Habits"
+  ],
+  "title_len": [
+   64
+  ],
+  "desc": [
+   "True, sourced stories of people who got lucky by doing this: Ask what the setback made possible."
+  ],
+  "desc_len": [
+   96
+  ],
+  "canonical": [
+   "https://luckhabits.com/moves/28.html"
+  ],
+  "h1": [
+   "Ask what the setback made possible"
+  ],
+  "ld_types": [],
+  "imgs": 0,
+  "imgs_noalt": 0,
+  "words": 119,
+  "lang": [
+   "en"
+  ],
+  "links": [
+   "../",
+   "../#signup",
+   "../assets/style.css",
+   "../favicon.svg",
+   "27.html",
+   "29.html",
+   "https://luckhabits.com/moves/28.html",
+   "https://www.220triathlon.com/news/classy-vincent-luis-wins-ironman-world-championship"
+  ]
+ },
+ {
+  "url": "https://luckhabits.com/moves/31.html",
+  "code": "200",
+  "title": [
+   "Luck habit #31: Play long games with the same people | Luck Habits"
+  ],
+  "title_len": [
+   66
+  ],
+  "desc": [
+   "True, sourced stories of people who got lucky by doing this: Play long games with the same people."
+  ],
+  "desc_len": [
+   98
+  ],
+  "canonical": [
+   "https://luckhabits.com/moves/31.html"
+  ],
+  "h1": [
+   "Play long games with the same people"
+  ],
+  "ld_types": [],
+  "imgs": 0,
+  "imgs_noalt": 0,
+  "words": 93,
+  "lang": [
+   "en"
+  ],
+  "links": [
+   "../",
+   "../#signup",
+   "../assets/style.css",
+   "../favicon.svg",
+   "30.html",
+   "32.html",
+   "https://luckhabits.com/moves/31.html",
+   "https://youtu.be/gRsqkh_kTe0"
+  ]
+ },
+ {
+  "url": "https://luckhabits.com/moves/33.html",
+  "code": "200",
+  "title": [
+   "Luck habit #33: Stay in longer than the early talent would | Luck Habits"
+  ],
+  "title_len": [
+   72
+  ],
+  "desc": [
+   "True, sourced stories of people who got lucky by doing this: Stay in longer than the early talent would."
+  ],
+  "desc_len": [
+   104
+  ],
+  "canonical": [
+   "https://luckhabits.com/moves/33.html"
+  ],
+  "h1": [
+   "Stay in longer than the early talent would"
+  ],
+  "ld_types": [],
+  "imgs": 0,
+  "imgs_noalt": 0,
+  "words": 160,
+  "lang": [
+   "en"
+  ],
+  "links": [
+   "../",
+   "../#signup",
+   "../assets/style.css",
+   "../favicon.svg",
+   "32.html",
+   "https://luckhabits.com/moves/33.html",
+   "https://tennisnow.com/late-blooming-bergs-latest-step-now-i-can-win-against-those-guys/",
+   "https://www.golfdigest.com/story/austin-smotherman-captures-first-pga-tour-title-at-2026-bank-of-utah-championship"
+  ]
+ }
+]

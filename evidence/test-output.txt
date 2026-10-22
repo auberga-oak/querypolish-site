@@ -1,0 +1,80 @@
+PASS / @360px dpr1: no horizontal overflow (scrollWidth=360)
+PASS / status 200
+PASS /thanks/ @360px dpr1: no horizontal overflow (scrollWidth=360)
+PASS /thanks/ status 200
+PASS /privacy/ @360px dpr1: no horizontal overflow (scrollWidth=360)
+PASS /privacy/ status 200
+PASS /no-such-page/ @360px dpr1: no horizontal overflow (scrollWidth=360)
+PASS 404 page status 404
+PASS @360px dpr1: no console errors/warnings on any page (expected document 404 on /no-such-page/ excluded) []
+PASS / @390px dpr1: no horizontal overflow (scrollWidth=390)
+PASS / status 200
+PASS /thanks/ @390px dpr1: no horizontal overflow (scrollWidth=390)
+PASS /thanks/ status 200
+PASS /privacy/ @390px dpr1: no horizontal overflow (scrollWidth=390)
+PASS /privacy/ status 200
+PASS /no-such-page/ @390px dpr1: no horizontal overflow (scrollWidth=390)
+PASS 404 page status 404
+PASS @390px dpr1: no console errors/warnings on any page (expected document 404 on /no-such-page/ excluded) []
+PASS / @390px dpr2: no horizontal overflow (scrollWidth=390)
+PASS / status 200
+PASS /thanks/ @390px dpr2: no horizontal overflow (scrollWidth=390)
+PASS /thanks/ status 200
+PASS /privacy/ @390px dpr2: no horizontal overflow (scrollWidth=390)
+PASS /privacy/ status 200
+PASS /no-such-page/ @390px dpr2: no horizontal overflow (scrollWidth=390)
+PASS 404 page status 404
+PASS @390px dpr2: no console errors/warnings on any page (expected document 404 on /no-such-page/ excluded) []
+PASS / @1280px dpr1: no horizontal overflow (scrollWidth=1280)
+PASS / status 200
+PASS /thanks/ @1280px dpr1: no horizontal overflow (scrollWidth=1280)
+PASS /thanks/ status 200
+PASS /privacy/ @1280px dpr1: no horizontal overflow (scrollWidth=1280)
+PASS /privacy/ status 200
+PASS /no-such-page/ @1280px dpr1: no horizontal overflow (scrollWidth=1280)
+PASS 404 page status 404
+PASS @1280px dpr1: no console errors/warnings on any page (expected document 404 on /no-such-page/ excluded) []
+PASS / @1280px dpr2: no horizontal overflow (scrollWidth=1280)
+PASS / status 200
+PASS /thanks/ @1280px dpr2: no horizontal overflow (scrollWidth=1280)
+PASS /thanks/ status 200
+PASS /privacy/ @1280px dpr2: no horizontal overflow (scrollWidth=1280)
+PASS /privacy/ status 200
+PASS /no-such-page/ @1280px dpr2: no horizontal overflow (scrollWidth=1280)
+PASS 404 page status 404
+PASS @1280px dpr2: no console errors/warnings on any page (expected document 404 on /no-such-page/ excluded) []
+PASS required fields = ['Business name', 'Address', 'Industry', 'Website', 'Google Business Profile URL', 'Main service', 'Main city', 'Keyword 1', 'Keyword 2', 'Keyword 3', 'Competitor 1 GBP URL', 'Competitor 1 domain', 'Competitor 2 GBP URL', 'Competitor 2 domain', 'Competitor 3 GBP URL', 'Competitor 3 domain', 'email', 'Consent']
+PASS no password/login fields
+PASS footer names Finansium AB
+PASS consent checkbox required
+PASS email required, type=email
+PASS empty submit blocked, 18 invalid fields, 0 requests
+PASS status message shown on invalid: Please fill in the required fields marked with a star.
+PASS focus moved to first invalid field
+PASS missing consent blocks submit
+PASS invalid email blocks submit
+PASS missing competitor 2 domain blocks submit
+PASS valid submit fires exactly 1 backend request (aborted)
+PASS payload carries every required value + consent
+PASS payload has placeholder key, honeypot unchecked
+PASS aborted request -> error shown, stays on page: Something went wrong and your details were not sent. Please try again in a few minutes.
+PASS mocked success -> /thanks/
+PASS thanks page says we will email the report
+PASS JS off: empty submit blocked by native validation
+PASS JS off: native POST to Web3Forms with redirect to /thanks/ (aborted)
+PASS contrast: 195 text nodes, min 4.61:1 ("placeholder:e.g. plumber, dent" rgb(117, 117, 117) on input), failures []
+PASS /: anchor #main exists
+PASS /: anchor #audit exists
+PASS /: anchor #audit exists
+PASS /thanks/: anchor #main exists
+PASS /privacy/: anchor #main exists
+PASS /no-such-page/: anchor #main exists
+PASS internal link http://127.0.0.1:28765/ -> 200
+PASS internal link http://127.0.0.1:28765/#audit -> 200
+PASS internal link http://127.0.0.1:28765/#main -> 200
+PASS internal link http://127.0.0.1:28765/privacy/ -> 200
+PASS internal link http://127.0.0.1:28765/privacy/#main -> 200
+PASS internal link http://127.0.0.1:28765/thanks/#main -> 200
+PASS no request left the box during page loads: []
+
+SUMMARY: 78 pass, 0 fail
