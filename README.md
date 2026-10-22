@@ -88,3 +88,9 @@ No wildcard records. Source: https://docs.github.com/en/pages/configuring-a-cust
 - Live: none yet.
 ## Submission location
 - Not set up yet (proposed: Web3Forms -> team AgentMail inbox).
+
+## Status 22 Oct 2026 13:27 (Stockholm)
+- Copy approved by Zinsser; edits applied in cc6789b (78 pass, 0 fail).
+- Repo created (empty, public): https://github.com/auberga-oak/querypolish-site. Push held for Henrik's placeholder confirmation.
+- GitHub Pages domain verification pending: TXT `_github-pages-challenge-auberga-oak.querypolish.com` = `0b9c128da44537407369e446f0534a` (sent to Warren for Spaceship).
+- Backend: Web3Forms free, receiving inbox warren.ekenberg@agentmail.to (key step: Warren).
