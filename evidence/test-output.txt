@@ -1,3 +1,6 @@
+PASS branch A @360px: no horizontal overflow (360)
+PASS branch B @360px: no horizontal overflow (360)
+PASS branch C @360px: no horizontal overflow (360)
 PASS / @360px dpr1: no horizontal overflow (scrollWidth=360)
 PASS / status 200
 PASS /thanks/ @360px dpr1: no horizontal overflow (scrollWidth=360)
@@ -7,6 +10,9 @@ PASS /privacy/ status 200
 PASS /no-such-page/ @360px dpr1: no horizontal overflow (scrollWidth=360)
 PASS 404 page status 404
 PASS @360px dpr1: no console errors/warnings on any page (expected document 404 on /no-such-page/ excluded) []
+PASS branch A @390px: no horizontal overflow (390)
+PASS branch B @390px: no horizontal overflow (390)
+PASS branch C @390px: no horizontal overflow (390)
 PASS / @390px dpr1: no horizontal overflow (scrollWidth=390)
 PASS / status 200
 PASS /thanks/ @390px dpr1: no horizontal overflow (scrollWidth=390)
@@ -25,6 +31,9 @@ PASS /privacy/ status 200
 PASS /no-such-page/ @390px dpr2: no horizontal overflow (scrollWidth=390)
 PASS 404 page status 404
 PASS @390px dpr2: no console errors/warnings on any page (expected document 404 on /no-such-page/ excluded) []
+PASS branch A @1280px: no horizontal overflow (1280)
+PASS branch B @1280px: no horizontal overflow (1280)
+PASS branch C @1280px: no horizontal overflow (1280)
 PASS / @1280px dpr1: no horizontal overflow (scrollWidth=1280)
 PASS / status 200
 PASS /thanks/ @1280px dpr1: no horizontal overflow (scrollWidth=1280)
@@ -43,26 +52,95 @@ PASS /privacy/ status 200
 PASS /no-such-page/ @1280px dpr2: no horizontal overflow (scrollWidth=1280)
 PASS 404 page status 404
 PASS @1280px dpr2: no console errors/warnings on any page (expected document 404 on /no-such-page/ excluded) []
-PASS required fields = ['Business name', 'Address', 'Industry', 'Website', 'Google Business Profile URL', 'Main service', 'Main city', 'Keyword 1', 'Keyword 2', 'Keyword 3', 'Competitor 1 GBP URL', 'Competitor 1 domain', 'Competitor 2 GBP URL', 'Competitor 2 domain', 'Competitor 3 GBP URL', 'Competitor 3 domain', 'email', 'Consent']
+PASS Q1 business_type is the first field
+PASS Q1 radios: local_listing/local_no_listing/online_only, required
+PASS Q1 helper text present
 PASS no password/login fields
 PASS footer names Finansium AB
 PASS consent checkbox required
 PASS email required, type=email
-PASS empty submit blocked, 18 invalid fields, 0 requests
+PASS report language defaults to English
+PASS report language options English/Swedish
+PASS no branch picked: all branch fields hidden+disabled []
+PASS empty submit blocked, invalid=['Business name', 'Consent', 'business_type', 'email'], 0 requests
 PASS status message shown on invalid: Please fill in the required fields marked with a star.
-PASS focus moved to first invalid field
-PASS missing consent blocks submit
+PASS focus moved to first invalid field (Q1)
+PASS 3 competitor GBP URL fields exist in the DOM
+PASS A: required = ['Business name', 'Consent', 'Google Business Profile URL', 'business_type', 'email']
+PASS A: own branch fields visible + enabled
+PASS A: other-branch fields hidden, disabled, not required []
+PASS A: competitor GBP URL fields enabled+visible only in A (enabled here: 3)
+PASS A: competitor domains shown, optional
+PASS A: report language still English by default
+PASS A: submit with only Q1 blocked, invalid=['Business name', 'Consent', 'Google Business Profile URL', 'email']
+PASS A: missing branch-required field blocks submit
+PASS A: valid submit fires exactly 1 backend request (aborted)
+PASS A: business_type = local_listing
+PASS A: no other-branch fields in payload []
+PASS A: payload carries common + branch-required values + consent
+PASS A: report_language = English
+PASS A: payload has Web3Forms key, honeypot unchecked
+PASS A: aborted request -> error shown, stays on page
+PASS B: required = ['Address or service area', 'Business name', 'Consent', 'business_type', 'email']
+PASS B: own branch fields visible + enabled
+PASS B: other-branch fields hidden, disabled, not required []
+PASS B: competitor GBP URL fields enabled+visible only in A (enabled here: 0)
+PASS B: competitor domains shown, optional
+PASS B: report language still English by default
+PASS B: submit with only Q1 blocked, invalid=['Address or service area', 'Business name', 'Consent', 'email']
+PASS B: missing branch-required field blocks submit
+PASS B: valid submit fires exactly 1 backend request (aborted) after switching from A
+PASS B: business_type = local_no_listing
+PASS B: no other-branch fields in payload []
+PASS B: payload carries common + branch-required values + consent
+PASS B: report_language = English
+PASS B: payload has Web3Forms key, honeypot unchecked
+PASS B: aborted request -> error shown, stays on page
+PASS C: required = ['Business name', 'Consent', 'Website (online)', 'business_type', 'email']
+PASS C: own branch fields visible + enabled
+PASS C: other-branch fields hidden, disabled, not required []
+PASS C: competitor GBP URL fields enabled+visible only in A (enabled here: 0)
+PASS C: competitor domains shown, optional
+PASS C: report language still English by default
+PASS C: submit with only Q1 blocked, invalid=['Business name', 'Consent', 'Website (online)', 'email']
+PASS C: missing branch-required field blocks submit
+PASS C: valid submit fires exactly 1 backend request (aborted) after switching from B
+PASS C: business_type = online_only
+PASS C: no other-branch fields in payload []
+PASS C: payload carries common + branch-required values + consent
+PASS C: report_language = Swedish
+PASS C: payload has Web3Forms key, honeypot unchecked
+PASS C: aborted request -> error shown, stays on page
+PASS A: required = ['Business name', 'Consent', 'Google Business Profile URL', 'business_type', 'email']
+PASS A: own branch fields visible + enabled
+PASS A: other-branch fields hidden, disabled, not required []
+PASS A: competitor GBP URL fields enabled+visible only in A (enabled here: 3)
+PASS A: competitor domains shown, optional
+PASS A: report language still English by default
+PASS A: submit with only Q1 blocked, invalid=['Business name', 'Consent', 'Google Business Profile URL', 'email']
+PASS A: missing branch-required field blocks submit
+PASS A: valid submit fires exactly 1 backend request (aborted) after switching from C
+PASS A: business_type = local_listing
+PASS A: no other-branch fields in payload []
+PASS A: payload carries common + branch-required values + consent
+PASS A: report_language = English
+PASS A: payload has Web3Forms key, honeypot unchecked
+PASS A: aborted request -> error shown, stays on page
 PASS invalid email blocks submit
-PASS missing competitor 2 domain blocks submit
-PASS valid submit fires exactly 1 backend request (aborted)
-PASS payload carries every required value + consent
-PASS payload has Web3Forms key, honeypot unchecked
-PASS aborted request -> error shown, stays on page: Something went wrong and your details were not sent. Please try again in a few minutes.
 PASS mocked success -> /thanks/
 PASS thanks page says we will email the report
+PASS JS off @360px: no horizontal overflow (360)
+PASS JS off @390px: no horizontal overflow (390)
+PASS JS off: every section visible and enabled
+PASS JS off: only common fields required ['Business name', 'Consent', 'business_type', 'email']
+PASS JS off: "fill in this part if you picked…" notes shown, branch stars hidden
+PASS JS off: report language defaults to English
 PASS JS off: empty submit blocked by native validation
 PASS JS off: native POST to Web3Forms with redirect to /thanks/ (aborted)
-PASS contrast: 195 text nodes, min 4.61:1 ("placeholder:e.g. plumber, dent" rgb(117, 117, 117) on input), failures []
+PASS JS off: business_type=online_only, report_language=English in POST
+PASS JS off (documented): other-branch fields are sent, but empty
+PASS JS off @1280px: no horizontal overflow (1280)
+PASS contrast: 609 text nodes, min 4.61:1 ("placeholder:https://" rgb(117, 117, 117) on input), failures []
 PASS /: anchor #main exists
 PASS /: anchor #audit exists
 PASS /: anchor #audit exists
@@ -77,4 +155,4 @@ PASS internal link http://127.0.0.1:28765/privacy/#main -> 200
 PASS internal link http://127.0.0.1:28765/thanks/#main -> 200
 PASS no request left the box during page loads: []
 
-SUMMARY: 78 pass, 0 fail
+SUMMARY: 156 pass, 0 fail

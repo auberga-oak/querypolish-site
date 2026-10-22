@@ -1,0 +1,205 @@
+--- main@54ca006
++++ branching-v1
+@@ -2,3 +2,3 @@
+ TITLE: Query Polish: a free local search audit
+-META DESCRIPTION: A free audit of how your business shows up in Google Maps and local search, compared with three competitors you choose. The report comes by email.
++META DESCRIPTION: A free audit of how your business shows up in Google Maps and local search, compared with up to three competitors you choose. The report comes by email.
+ Skip to content 
+@@ -7,3 +7,3 @@
+ # A free audit of how your business shows up in local search 
+-Tell us about your business and three competitors. We compare your Google Business Profile and website with theirs for the searches you care about, and email you a written report. 
++Tell us about your business and up to three competitors. We compare your Google Business Profile, if you have one, and your website with theirs for the searches you care about, and email you a written report. 
+ Request the audit   
+@@ -11,6 +11,6 @@
+ ## What the audit covers  
+-- Your Google Business Profile: categories, attributes, services, description, photos and posts, set against what your competitors do. 
+-- Your reviews: how many you have, how often new ones come in, what customers mention, and how your competitors' reviews differ. 
+-- Your website: whether your main service pages match the searches you named, and which local topics your competitors cover that you don't. 
+-- Your business details: whether your name, address and phone number match across the web.  
++- Your Google Business Profile: categories, attributes, services, description, photos and posts, set against what your competitors do. If you don't have a profile yet, the report starts with how to set one up. 
++- Your Google reviews, if you have a profile: how many you have, how often new ones come in, what customers mention, and how your competitors' reviews differ. 
++- Your website: whether your main service pages match the searches you named, and which topics your competitors cover that you don't. 
++- Your business details: whether your name, address and phone number match across the web. For online-only businesses, we check your profiles on directories, social sites and marketplaces instead.  
+ Each finding comes with a suggested fix and a note on how much it's likely to matter.   
+@@ -19,3 +19,3 @@
+ - Fill in the form below. It takes about ten minutes. Only the fields marked with a star are required. 
+-- We look at public information: your profile, your website, and the three competitors you name. 
++- We look at public information: your profile if you have one, your website, and the competitors you name. 
+ - We email the report to the address you give us.  
+@@ -35,17 +35,14 @@
+ 
+-### Your business
+-
+-Business name *Exactly as it appears on your Google Business Profile.
+-
+-Owner's name (optional)
++### How do your customers find and use your business? *
++Not sure? If you can be found on Google Maps, pick A.
+ 
+-Full address *Include suite or unit number. Write it as it appears on your profile.
++A. I'm a local business with a Google Maps listing (customers visit me, or I visit them in my area)
++B. I'm a local business but I don't have a Google Maps listing yet
++C. I'm online only (no shop or service area, e.g. e-commerce, SaaS, newsletter, online courses) 
+ 
+-Phone number (optional)As shown on your profile.
+-
+-Industry or type of business * [placeholder: e.g. plumber, dental clinic]
++### Your business
+ 
+-Website address * [placeholder: https://]
++Business name *Exactly as it appears on your Google Business Profile, if you have one.
+ 
+-Your Google Business Profile link *Open your listing in Google Maps and copy the share link. [placeholder: https://]
++Owner's name (optional)
+ 
+@@ -57,43 +54,51 @@
+ Small team
+-Large team 
++Large team
+ 
+-### Services and market
++Your best customer (optional)Who they are, in a sentence or two. 
+ 
+-Main service * [placeholder: e.g. emergency plumbing]
++### Your Google Maps listing
++Fill in this part if you picked A above.
+ 
+-Other services (optional)Up to 5, one per line.
++Your Google Business Profile link *(required if this is your answer above)Open your listing in Google Maps and copy the share link. [placeholder: https://]
+ 
+-Main city *
++Full address (optional)Include suite or unit number. Write it as it appears on your profile. 
+ 
+-Other cities you serve (optional)Up to 5, one per line.
++### Where you work
++Fill in this part if you picked B above.
+ 
+-Neighbourhoods or areas (optional)Up to 3, one per line. These are the parts of town where you most want to be found.
++Business address or service area *(required if this is your answer above)Your street address if customers visit you, or the area you cover if you visit them. 
+ 
+-Your best customer (optional)Who they are, in a sentence or two.
++### Services and market
++Fill in this part if you picked A or B above.
+ 
+-Average job value (optional)Roughly, with currency, e.g. 4,000 SEK. 
++Phone number (optional)As shown on your profile or website.
+ 
+-### Keywords
+-The searches you most want to show up for, such as "plumber in Uppsala". Three are required, five are better.
++Industry or type of business (optional) [placeholder: e.g. plumber, dental clinic]
+ 
+-Keyword 1 *
++Website address (optional) [placeholder: https://]
+ 
+-Keyword 2 *
++Main service (optional) [placeholder: e.g. emergency plumbing]
+ 
+-Keyword 3 *
++Other services (optional)Up to 5, one per line.
+ 
+-Keyword 4 (optional)
++Cities you serve (optional)Up to 5, one per line. Put your main city first.
+ 
+-Keyword 5 (optional)
+ 
+-Searches you already show up for (optional)If you know them.
++Neighbourhoods or areas (optional)Up to 3, one per line. These are the parts of town where you most want to be found.
+ 
+-Searches you should show up for but don't (optional)
++Average job value (optional)Roughly, with currency, e.g. 4,000 SEK. 
+ 
+-Service word for reviews (optional)The service you'd like customers to mention in reviews.
++### Your online business
++Fill in this part if you picked C above.
+ 
+-City word for reviews (optional)The place you'd like customers to mention in reviews. 
++Website address *(required if this is your answer above) [placeholder: https://]
++
++What you sell (optional)Your main products or services, in a sentence or two.
+ 
+-### Three competitors
+-The three businesses that most often show up above you in search. We need each one's Google Business Profile link and website.
++Main country (optional)Where most of your customers are.
++
++Main language (optional)The language your customers search in. 
++
++### Competitors (optional)
++Up to three businesses that most often show up above you in search. The more you name, the better the audit.
+ 
+@@ -103,5 +108,6 @@
+ 
+-Google Business Profile link * [placeholder: https://]
++Website domain (optional) [placeholder: example.com]
++
+ 
+-Website domain * [placeholder: example.com]
++Google Business Profile link (optional) [placeholder: https://]
+ 
+@@ -113,5 +119,6 @@
+ 
+-Google Business Profile link * [placeholder: https://]
++Website domain (optional) [placeholder: example.com]
+ 
+-Website domain * [placeholder: example.com]
++
++Google Business Profile link (optional) [placeholder: https://]
+ 
+@@ -123,5 +130,6 @@
+ 
+-Google Business Profile link * [placeholder: https://]
++Website domain (optional) [placeholder: example.com]
++
+ 
+-Website domain * [placeholder: example.com]
++Google Business Profile link (optional) [placeholder: https://]
+ 
+@@ -129,2 +137,24 @@
+ 
++### Keywords (all optional)
++The searches you most want to show up for, such as "plumber in Uppsala". Up to five.
++
++Keyword 1 (optional)
++
++Keyword 2 (optional)
++
++Keyword 3 (optional)
++
++Keyword 4 (optional)
++
++Keyword 5 (optional)
++
++Searches you already show up for (optional)If you know them.
++
++Searches you should show up for but don't (optional)
++
++
++Service word for reviews (optional)The service you'd like customers to mention in reviews.
++
++City word for reviews (optional)The place you'd like customers to mention in reviews. 
++
+ ### Your current numbers (all optional)
+@@ -132,2 +162,3 @@
+ 
++
+ Google reviews (optional)
+@@ -140,6 +171,6 @@
+ 
+-Monthly website visits (optional)
+-
+ Google Maps top 3 (optional)Which searches you show up in the top 3 for, and which you don't.
+ 
++Monthly website visits (optional)
++
+ Your biggest search problem, in one sentence (optional)
+@@ -151,2 +182,6 @@
+ Your email address *
++Report language
++
++English
++Swedish
+ 
+@@ -175,3 +210,3 @@
+ Who is responsible. Finansium AB is the data controller for Query Polish. Contact: henrik.ekenberg@finansium.se. 
+-What we collect. What you type into the audit form: details about your business, your services and market, the searches you want to show up for, three competitors, any numbers you choose to share, and your email address. We never ask for passwords or logins. 
++What we collect. What you type into the audit form: how your customers find your business, details about your business, your services and market, the searches you want to show up for, up to three competitors, any numbers you choose to share, your email address and the language you want the report in. We never ask for passwords or logins. 
+ Why. Only to prepare your audit and email the report to you. The legal basis is your consent, which you give by ticking the box on the form. We don't sell your information, share it for marketing, or add you to a mailing list. 
