@@ -10,7 +10,7 @@ Request the audit
 
 ## What the audit covers  
 - Your Google Business Profile: categories, attributes, services, description, photos and posts, set against what your competitors do. If you don't have a profile yet, the report starts with how to set one up. 
-- Your Google reviews, if you have a profile: how many you have, how often new ones come in, what customers mention, and how your competitors' reviews differ. 
+- Your Google reviews (if you have a profile): how many you have, how often new ones come in, what customers mention, and how your competitors' reviews differ. 
 - Your website: whether your main service pages match the searches you named, and which topics your competitors cover that you don't. 
 - Your business details: whether your name, address and phone number match across the web. For online-only businesses, we check your profiles on directories, social sites and marketplaces instead.  
 Each finding comes with a suggested fix and a note on how much it's likely to matter.   
@@ -33,7 +33,7 @@ Fields marked * are required.
 
 Leave this empty 
 
-### How do your customers find and use your business? *
+### How do your customers find you? *
 Not sure? If you can be found on Google Maps, pick A.
 
 A. I'm a local business with a Google Maps listing (customers visit me, or I visit them in my area)
@@ -60,7 +60,7 @@ Your best customer (optional)Who they are, in a sentence or two.
 ### Your Google Maps listing
 Fill in this part if you picked A above.
 
-Your Google Business Profile link *(required if this is your answer above)Open your listing in Google Maps and copy the share link. [placeholder: https://]
+Your Google Business Profile link *(required for this answer)Open your listing in Google Maps and copy the share link. [placeholder: https://]
 
 Full address (optional)Include suite or unit number. Write it as it appears on your profile. 
 [shown for: local_no_listing]
@@ -68,7 +68,7 @@ Full address (optional)Include suite or unit number. Write it as it appears on y
 ### Where you work
 Fill in this part if you picked B above.
 
-Business address or service area *(required if this is your answer above)Your street address if customers visit you, or the area you cover if you visit them. 
+Business address or service area *(required for this answer)Your street address if customers visit you, or the area you cover if you visit them. 
 [shown for: local_listing local_no_listing]
 
 ### Services and market
@@ -96,7 +96,7 @@ Average job value (optional)Roughly, with currency, e.g. 4,000 SEK.
 ### Your online business
 Fill in this part if you picked C above.
 
-Website address *(required if this is your answer above) [placeholder: https://]
+Website address *(required for this answer) [placeholder: https://]
 
 What you sell (optional)Your main products or services, in a sentence or two.
 
@@ -105,7 +105,7 @@ Main country (optional)Where most of your customers are.
 Main language (optional)The language your customers search in. 
 
 ### Competitors (optional)
-Up to three businesses that most often show up above you in search. The more you name, the better the audit.
+Up to three businesses that most often show up above you in search. Each one you name gives us more to compare.
 
 ### Competitor 1
 
@@ -218,7 +218,7 @@ Query PolishRequest the audit
 
 # Privacy 
 Who is responsible. Finansium AB is the data controller for Query Polish. Contact: henrik.ekenberg@finansium.se. 
-What we collect. What you type into the audit form: how your customers find your business, details about your business, your services and market, the searches you want to show up for, up to three competitors, any numbers you choose to share, your email address and the language you want the report in. We never ask for passwords or logins. 
+What we collect. What you type into the audit form: how your customers find you, details about your business, your services and market, the searches you want to show up for, up to three competitors, any numbers you choose to share, your email address and the language you want the report in. We never ask for passwords or logins. 
 Why. Only to prepare your audit and email the report to you. The legal basis is your consent, which you give by ticking the box on the form. We don't sell your information, share it for marketing, or add you to a mailing list. 
 Who processes it. Web3Forms (web3forms.com) receives the form and forwards it to us by email, as our data processor. 
 How long. We keep your answers and the report for 12 months after we send it, then delete them. You can ask us to delete them sooner. 

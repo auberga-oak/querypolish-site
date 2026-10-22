@@ -18,7 +18,7 @@ These stay as they were on purpose, so please confirm them:
 - "It takes about ten minutes. Only the fields marked with a star are required." Still true (fewer required fields, so if anything it's quicker).
 
 ## 2. Form: new question 1 (all **NEW**)
-- Legend: **How do your customers find and use your business?** * (required)
+- Legend: **How do your customers find you?** * (required)
 - Helper: **Not sure? If you can be found on Google Maps, pick A.**
 - **A. I'm a local business with a Google Maps listing** (customers visit me, or I visit them in my area)
 - **B. I'm a local business but I don't have a Google Maps listing yet**
@@ -39,7 +39,7 @@ These stay as they were on purpose, so please confirm them:
 | 16 | Legend (C) | – | **Your online business** | NEW |
 | 17 | Fields (C) | – | **Website address** * · **What you sell** (hint: **Your main products or services, in a sentence or two.**) · **Main country** (hint: **Where most of your customers are.**) · **Main language** (hint: **The language your customers search in.**) | NEW |
 | 18 | Competitors legend | Three competitors | **Competitors** (optional) | CHANGED |
-| 19 | Competitors hint | The three businesses that most often show up above you in search. We need each one's Google Business Profile link and website. | **Up to three businesses that most often show up above you in search. The more you name, the better the audit. Leave blank and we'll pick likely competitors from public search.** | CHANGED (Warren's requested hint) |
+| 19 | Competitors hint | The three businesses that most often show up above you in search. We need each one's Google Business Profile link and website. | **Up to three businesses that most often show up above you in search. Each one you name gives us more to compare. Leave blank and we'll pick likely competitors from public search.** | CHANGED (Warren's requested hint) |
 | 20 | Competitor N: Google Business Profile link / Website domain | both required *, link listed first | both optional, domain first; the link appears only for answer A | CHANGED |
 | 21 | Keywords legend | Keywords | Keywords **(all optional)** | CHANGED |
 | 22 | Keywords hint | The searches you most want to show up for, such as "plumber in Uppsala". Three are required, five are better. | The searches you most want to show up for, such as "plumber in Uppsala". **Up to five.** | CHANGED |
@@ -50,12 +50,12 @@ Field order also changed (no wording change): "Your best customer" moved into "Y
 
 ## 4. Without JavaScript only (**NEW**, hidden when JS is on)
 - At the top of each branch section: **Fill in this part if you picked A above.** / **…B above.** / **…A or B above.** / **…C above.**
-- Next to each branch-required field, instead of the star: **(required if this is your answer above)**
+- Next to each branch-required field, instead of the star: **(required for this answer)**
 
 ## 5. Privacy page
 | # | Old | New |
 |---|---|---|
-| 25 | What we collect. What you type into the audit form: details about your business, your services and market, the searches you want to show up for, three competitors, any numbers you choose to share, and your email address. … | What we collect. What you type into the audit form: **how your customers find your business,** details about your business, your services and market, the searches you want to show up for, **up to three** competitors, any numbers you choose to share, your email address **and the language you want the report in**. … |
+| 25 | What we collect. What you type into the audit form: details about your business, your services and market, the searches you want to show up for, three competitors, any numbers you choose to share, and your email address. … | What we collect. What you type into the audit form: **how your customers find you,** details about your business, your services and market, the searches you want to show up for, **up to three** competitors, any numbers you choose to share, your email address **and the language you want the report in**. … |
 
 ## 6. Unchanged
 - The "What the audit covers" closing line, the note, the Privacy section, the button text, error and status messages, the consent text, the thanks page, the 404 page, the footer and the rest of the privacy page are all unchanged.
