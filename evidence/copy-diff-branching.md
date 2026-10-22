@@ -39,7 +39,7 @@ These stay as they were on purpose, so please confirm them:
 | 16 | Legend (C) | – | **Your online business** | NEW |
 | 17 | Fields (C) | – | **Website address** * · **What you sell** (hint: **Your main products or services, in a sentence or two.**) · **Main country** (hint: **Where most of your customers are.**) · **Main language** (hint: **The language your customers search in.**) | NEW |
 | 18 | Competitors legend | Three competitors | **Competitors** (optional) | CHANGED |
-| 19 | Competitors hint | The three businesses that most often show up above you in search. We need each one's Google Business Profile link and website. | **Up to three businesses that most often show up above you in search. The more you name, the better the audit.** | CHANGED (Warren's requested hint) |
+| 19 | Competitors hint | The three businesses that most often show up above you in search. We need each one's Google Business Profile link and website. | **Up to three businesses that most often show up above you in search. The more you name, the better the audit. Leave blank and we'll pick likely competitors from public search.** | CHANGED (Warren's requested hint) |
 | 20 | Competitor N: Google Business Profile link / Website domain | both required *, link listed first | both optional, domain first; the link appears only for answer A | CHANGED |
 | 21 | Keywords legend | Keywords | Keywords **(all optional)** | CHANGED |
 | 22 | Keywords hint | The searches you most want to show up for, such as "plumber in Uppsala". Three are required, five are better. | The searches you most want to show up for, such as "plumber in Uppsala". **Up to five.** | CHANGED |
