@@ -1,14 +1,39 @@
 ==================== docs/index.html
-TITLE: Query Polish: a free search audit for your business
-META DESCRIPTION: A free audit of how your business shows up in Google search and Google Maps, compared with your closest competitors. The report comes by email.
+TITLE: Query Polish: does the AI answer mention you? A free audit
+META DESCRIPTION: Your customers ask ChatGPT, Perplexity, Google AI Overviews and Google. A free audit of whether the answers mention your business. The report comes by email.
 Test version. This site is being tested and isn't open for requests yet. Skip to content 
 Query PolishRequest the audit   
 
-# A free audit of how your business shows up in search 
-Tell us your website. We compare your Google Business Profile, if you have one, and your website with your closest competitors for the searches your customers use, and email you a written report. 
+# Your customers ask AI. Does the answer mention you? 
+People ask ChatGPT, Perplexity, Google AI Overviews and Google which business to choose. Our free audit shows whether the answers mention you, and what to change on your website and Google Business Profile so they can. A person reads every report before we send it. 
 Request the audit   
 
-## What the audit covers  
+## An example 
+ExampleCo is invented. This is what it looks like when the answers include the website. 
+"Who can fix a blocked drain in Uppsala today?" 
+
+Google
+ExampleCo Plumbing: same-day drain repair in Uppsala
+example.com 
+
+ChatGPT
+ExampleCo can usually come the same day in central Uppsala.
+example.com 
+
+Perplexity
+Sources: ExampleCo emergency plumbing
+example.com/emergency 
+
+Google AI Overviews
+ExampleCo offers same-day drain repair in Uppsala.
+example.com/prices    
+
+## What the audit covers 
+An AI model can't mention a business it hasn't read. The same goes for Google. The audit looks at the website you already have and asks three questions.  
+- Read. Can Google, and the crawlers that AI tools send, see every page you already have? 
+- Found. When a customer asks a question, does the right page come up? Two of your pages shouldn't compete for the same question. 
+- Mentioned. Do the answers name your business and link to your site? Where an answer is wrong, the fix belongs on your site, not in the chat.  
+It also covers:  
 - Your Google Business Profile: categories, attributes, services, description, photos and posts, set against what your competitors do. If you don't have a profile yet, the report starts with how to set one up. 
 - Your Google reviews (if you have a profile): how many you have, how often new ones come in, what customers mention, and how your competitors' reviews differ. 
 - Your website: whether your main service pages match the searches your customers use, and which topics your competitors cover that you don't. 
@@ -17,12 +42,12 @@ Each finding comes with a suggested fix and a note on how much it's likely to ma
 
 ## How it works  
 - Fill in the form below. You only need to give us your website and your email address. 
-- We look at public information: your profile if you have one, your website, and your closest competitors. 
-- We email the report to the address you give us.  
-We never ask for passwords or logins. The audit uses only what you tell us and what anyone can see on Google and on the web.   
+- We look at public information: your profile if you have one, your website, and your closest competitors. We also put the questions your customers ask to ChatGPT, Perplexity, Google AI Overviews and Google. 
+- A person reads the report first. Then we email it to the address you give us.  
+We never ask for passwords or logins. The audit uses only what you tell us and what anyone can see on Google and on the web. We only ask for access to Google Search Console and Google Analytics if you say yes to more work after the report.   
 
 ## Privacy 
-We use what you send only to prepare your audit and email it to you. We don't sell it, share it for marketing, or add you to a mailing list. You can ask us to delete it at any time. The privacy note has the details.   
+We use what you send only to prepare your audit and email it to you. We don't sell it, share it for marketing, or add you to a mailing list. You can ask us to delete it at any time. The privacy note has the details. This page stores nothing. We only receive what you send in the form.   
 
 ## Request your free audit 
 Fields marked * are required.  

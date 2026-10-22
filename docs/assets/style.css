@@ -44,3 +44,9 @@ footer{text-align:center;padding:30px 20px;font-size:14px;color:#4f5f66}
 .lbl{display:block;font-weight:600;margin-bottom:4px}
 #q1 legend{font-size:19px}
 .testbanner{background:#7a2e0e;color:#fff;text-align:center;padding:10px 16px;font-weight:700;font-size:15px}
+.example .q{font-weight:700;font-size:19px;margin:14px 0}
+.answers{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.ans{background:#fff;border:1px solid #cfd8d4;border-radius:8px;padding:12px 14px}.ans p{margin:0 0 4px}
+.ans .src{font-weight:700;font-size:14px;color:#4f5f66}.ans .url{font-size:14px;color:#1f5f73}
+.steps.three li{margin-bottom:10px}
+@media(max-width:600px){.answers{grid-template-columns:1fr}}

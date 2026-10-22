@@ -43,24 +43,40 @@ PASS / @1280px dpr1: no horizontal overflow (1280)
 PASS /: test banner visible
 PASS /: meta robots noindex, nofollow
 PASS /: no canonical to querypolish.com
+PASS /: no price / subscription text
+PASS /: no contact@ address
+PASS /: no "not for shops or restaurants"
+PASS /: no daily-change subscription wording
 PASS /thanks/ @1280px dpr1: status 200
 PASS /thanks/ @1280px: stylesheet applied (subpath assets resolve)
 PASS /thanks/ @1280px dpr1: no horizontal overflow (1280)
 PASS /thanks/: test banner visible
 PASS /thanks/: meta robots noindex, nofollow
 PASS /thanks/: no canonical to querypolish.com
+PASS /thanks/: no price / subscription text
+PASS /thanks/: no contact@ address
+PASS /thanks/: no "not for shops or restaurants"
+PASS /thanks/: no daily-change subscription wording
 PASS /privacy/ @1280px dpr1: status 200
 PASS /privacy/ @1280px: stylesheet applied (subpath assets resolve)
 PASS /privacy/ @1280px dpr1: no horizontal overflow (1280)
 PASS /privacy/: test banner visible
 PASS /privacy/: meta robots noindex, nofollow
 PASS /privacy/: no canonical to querypolish.com
+PASS /privacy/: no price / subscription text
+PASS /privacy/: no contact@ address
+PASS /privacy/: no "not for shops or restaurants"
+PASS /privacy/: no daily-change subscription wording
 PASS /no-such-page/ @1280px dpr1: status 404
 PASS /no-such-page/ @1280px: stylesheet applied (subpath assets resolve)
 PASS /no-such-page/ @1280px dpr1: no horizontal overflow (1280)
 PASS /no-such-page/: test banner visible
 PASS /no-such-page/: meta robots noindex, nofollow
 PASS /no-such-page/: no canonical to querypolish.com
+PASS /no-such-page/: no price / subscription text
+PASS /no-such-page/: no contact@ address
+PASS /no-such-page/: no "not for shops or restaurants"
+PASS /no-such-page/: no daily-change subscription wording
 PASS @1280px dpr1: no console errors/warnings (expected 404 doc on /no-such-page/ excluded) []
 PASS / @1280px dpr2: status 200
 PASS / @1280px: stylesheet applied (subpath assets resolve)
@@ -85,6 +101,8 @@ PASS branching question removed
 PASS report language defaults to English
 PASS hidden: key unchanged, redirect=https://auberga-oak.github.io/querypolish-site/thanks/
 PASS footer names Finansium AB
+PASS form: no mailto, posts to Web3Forms
+PASS example section labelled as invented
 PASS empty submit blocked, invalid=['Consent', 'Website', 'email']
 PASS status message shown on invalid
 PASS focus moved to first invalid field (Website)
@@ -113,11 +131,12 @@ PASS /privacy/: anchor #main exists
 PASS /privacy/: no root-absolute paths outside /querypolish-site/ []
 PASS /no-such-page/: anchor #main exists
 PASS /no-such-page/: no root-absolute paths outside /querypolish-site/ []
-PASS contrast: 81 text nodes, min 4.61:1 ("placeholder:https://"), failures []
+PASS contrast: 104 text nodes, min 4.61:1 ("placeholder:https://"), failures []
 PASS internal link http://127.0.0.1:28765/querypolish-site/ -> 200
 PASS internal link http://127.0.0.1:28765/querypolish-site/#audit -> 200
 PASS internal link http://127.0.0.1:28765/querypolish-site/#main -> 200
 PASS internal link http://127.0.0.1:28765/querypolish-site/assets/style.css?v=3 -> 200
+PASS internal link http://127.0.0.1:28765/querypolish-site/assets/style.css?v=4 -> 200
 PASS internal link http://127.0.0.1:28765/querypolish-site/favicon.svg -> 200
 PASS internal link http://127.0.0.1:28765/querypolish-site/privacy/ -> 200
 PASS internal link http://127.0.0.1:28765/querypolish-site/privacy/#main -> 200
@@ -125,4 +144,4 @@ PASS internal link http://127.0.0.1:28765/querypolish-site/thanks/#main -> 200
 PASS external link https://www.imy.se/ -> 200
 PASS no request left the site origin during tests: []
 
-SUMMARY: 126 pass, 0 fail
+SUMMARY: 145 pass, 0 fail

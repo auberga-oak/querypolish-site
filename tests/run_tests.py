@@ -54,6 +54,11 @@ with sync_playwright() as pw:
                     ok(p.locator('.testbanner').inner_text().strip()==BANNER and p.locator('.testbanner').is_visible(),f'{path}: test banner visible')
                     ok(p.eval_on_selector_all('meta[name=robots]','e=>e.map(x=>x.content)')==['noindex, nofollow'],f'{path}: meta robots noindex, nofollow')
                     ok(p.locator('link[rel=canonical]').count()==0,f'{path}: no canonical to querypolish.com')
+                    txt=p.inner_text('body'); src=p.content()
+                    ok(not re.search(r'10[\s\u00a0.,]?000|\bkr\b|/\s*month|per month',txt,re.I),f'{path}: no price / subscription text')
+                    ok('contact@' not in src,f'{path}: no contact@ address')
+                    ok(not re.search(r'not for (shops|restaurants)|inte för butiker',txt,re.I),f'{path}: no "not for shops or restaurants"')
+                    ok(not re.search(r'every (week)?day|varje vardag|daily change',txt,re.I),f'{path}: no daily-change subscription wording')
             ok(not errs,f'@{w}px dpr{dpr}: no console errors/warnings (expected 404 doc on /no-such-page/ excluded) {errs}')
             ctx.close()
     # robots.txt, sitemap, CNAME
@@ -76,6 +81,8 @@ with sync_playwright() as pw:
     hid={n['n']:p.eval_on_selector(f'input[type=hidden][name="{n["n"]}"]','e=>e.value') for n in names if n['t']=='hidden'}
     ok(hid.get('access_key')==KEY and hid.get('redirect')==REDIRECT,f'hidden: key unchanged, redirect={hid.get("redirect")}')
     ok('Finansium AB' in p.locator('footer').inner_text(),'footer names Finansium AB')
+    ok(p.locator('#intake a[href^="mailto:"]').count()==0 and p.eval_on_selector('#intake','f=>f.action')=='https://api.web3forms.com/submit' and p.eval_on_selector('#intake','f=>f.method')=='post','form: no mailto, posts to Web3Forms')
+    if p.locator('.example').count(): ok('ExampleCo is invented' in p.inner_text('.example'),'example section labelled as invented')
     posts=[]
     def backend(route): posts.append(route.request.post_data); route.abort()
     p.route('https://api.web3forms.com/**',backend)
