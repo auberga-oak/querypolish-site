@@ -131,10 +131,6 @@ PASS hidden: key unchanged, redirect=https://auberga-oak.github.io/querypolish-s
 PASS footer names Finansium AB
 PASS form: no mailto, posts to Web3Forms
 PASS example section labelled as invented
-PASS home: "Henrik reads every report before it is sent." exactly once
-PASS home: Zinsser GSC/GA4 line
-PASS home: storage line present
-PASS home: Zinsser GBP edit
 PASS empty submit blocked, invalid=['Consent', 'Website', 'email']
 PASS status message shown on invalid
 PASS focus moved to first invalid field (Website)
@@ -164,16 +160,16 @@ PASS /privacy/: no root-absolute paths outside /querypolish-site/ []
 PASS /no-such-page/: anchor #main exists
 PASS /no-such-page/: no root-absolute paths outside /querypolish-site/ []
 PASS contrast: 101 text nodes, min 4.61:1 ("placeholder:https://"), failures []
-PASS internal link http://127.0.0.1:28767/querypolish-site/ -> 200
-PASS internal link http://127.0.0.1:28767/querypolish-site/#audit -> 200
-PASS internal link http://127.0.0.1:28767/querypolish-site/#main -> 200
-PASS internal link http://127.0.0.1:28767/querypolish-site/assets/style.css?v=3 -> 200
-PASS internal link http://127.0.0.1:28767/querypolish-site/assets/style.css?v=4 -> 200
-PASS internal link http://127.0.0.1:28767/querypolish-site/favicon.svg -> 200
-PASS internal link http://127.0.0.1:28767/querypolish-site/privacy/ -> 200
-PASS internal link http://127.0.0.1:28767/querypolish-site/privacy/#main -> 200
-PASS internal link http://127.0.0.1:28767/querypolish-site/thanks/#main -> 200
+PASS internal link http://127.0.0.1:28765/querypolish-site/ -> 200
+PASS internal link http://127.0.0.1:28765/querypolish-site/#audit -> 200
+PASS internal link http://127.0.0.1:28765/querypolish-site/#main -> 200
+PASS internal link http://127.0.0.1:28765/querypolish-site/assets/style.css?v=3 -> 200
+PASS internal link http://127.0.0.1:28765/querypolish-site/assets/style.css?v=4 -> 200
+PASS internal link http://127.0.0.1:28765/querypolish-site/favicon.svg -> 200
+PASS internal link http://127.0.0.1:28765/querypolish-site/privacy/ -> 200
+PASS internal link http://127.0.0.1:28765/querypolish-site/privacy/#main -> 200
+PASS internal link http://127.0.0.1:28765/querypolish-site/thanks/#main -> 200
 PASS external link https://www.imy.se/ -> 200
 PASS no request left the site origin during tests: []
 
-SUMMARY: 177 pass, 0 fail
+SUMMARY: 173 pass, 0 fail
