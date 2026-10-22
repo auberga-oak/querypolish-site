@@ -1,0 +1,122 @@
+[
+ {
+  "text": "placeholder:https://",
+  "fg": "rgb(117, 117, 117)",
+  "bg": "input",
+  "ratio": 4.61,
+  "large": false,
+  "page": "/"
+ },
+ {
+  "text": "Fields marked",
+  "fg": "rgb(79, 95, 102)",
+  "bg": "rgb(247, 248, 246)",
+  "ratio": 6.24,
+  "large": false,
+  "page": "/"
+ },
+ {
+  "text": "are required.",
+  "fg": "rgb(79, 95, 102)",
+  "bg": "rgb(247, 248, 246)",
+  "ratio": 6.24,
+  "large": false,
+  "page": "/"
+ },
+ {
+  "text": "\u00b7 Query Polish is run by Finansium AB, S",
+  "fg": "rgb(79, 95, 102)",
+  "bg": "rgb(247, 248, 246)",
+  "ratio": 6.24,
+  "large": false,
+  "page": "/"
+ },
+ {
+  "text": "\u00b7 Query Polish is run by Finansium AB, S",
+  "fg": "rgb(79, 95, 102)",
+  "bg": "rgb(247, 248, 246)",
+  "ratio": 6.24,
+  "large": false,
+  "page": "/thanks/"
+ },
+ {
+  "text": "Last updated 22 October 2026.",
+  "fg": "rgb(79, 95, 102)",
+  "bg": "rgb(247, 248, 246)",
+  "ratio": 6.24,
+  "large": false,
+  "page": "/privacy/"
+ },
+ {
+  "text": "Query Polish is run by Finansium AB, Sto",
+  "fg": "rgb(79, 95, 102)",
+  "bg": "rgb(247, 248, 246)",
+  "ratio": 6.24,
+  "large": false,
+  "page": "/privacy/"
+ },
+ {
+  "text": "(optional)",
+  "fg": "rgb(79, 95, 102)",
+  "bg": "rgb(255, 255, 255)",
+  "ratio": 6.64,
+  "large": false,
+  "page": "/"
+ },
+ {
+  "text": "privacy note",
+  "fg": "rgb(31, 95, 115)",
+  "bg": "rgb(247, 248, 246)",
+  "ratio": 6.7,
+  "large": false,
+  "page": "/"
+ },
+ {
+  "text": "Privacy",
+  "fg": "rgb(31, 95, 115)",
+  "bg": "rgb(247, 248, 246)",
+  "ratio": 6.7,
+  "large": false,
+  "page": "/"
+ },
+ {
+  "text": "henrik.ekenberg@finansium.se",
+  "fg": "rgb(31, 95, 115)",
+  "bg": "rgb(247, 248, 246)",
+  "ratio": 6.7,
+  "large": false,
+  "page": "/thanks/"
+ },
+ {
+  "text": "Back to Query Polish",
+  "fg": "rgb(31, 95, 115)",
+  "bg": "rgb(247, 248, 246)",
+  "ratio": 6.7,
+  "large": false,
+  "page": "/thanks/"
+ },
+ {
+  "text": "Privacy",
+  "fg": "rgb(31, 95, 115)",
+  "bg": "rgb(247, 248, 246)",
+  "ratio": 6.7,
+  "large": false,
+  "page": "/thanks/"
+ },
+ {
+  "text": "henrik.ekenberg@finansium.se",
+  "fg": "rgb(31, 95, 115)",
+  "bg": "rgb(247, 248, 246)",
+  "ratio": 6.7,
+  "large": false,
+  "page": "/privacy/"
+ },
+ {
+  "text": "imy.se",
+  "fg": "rgb(31, 95, 115)",
+  "bg": "rgb(247, 248, 246)",
+  "ratio": 6.7,
+  "large": false,
+  "page": "/privacy/"
+ }
+]

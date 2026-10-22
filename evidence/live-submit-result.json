@@ -1,0 +1,26 @@
+{
+ "attempts": 1,
+ "submit_time_stockholm": "2026-10-22 16:46:38-16:46:39 CEST (script created 16:46:38.08, run took 1.4 s; Web3Forms email timestamp 16:46:39)",
+ "web3forms_response": "POST https://api.web3forms.com/submit answered (playwright saw the response); body NOT captured: the page navigated to thanks/ before the script read it",
+ "landed_on_thanks": "yes, inferred: form.js only navigates to thanks/ when the response is HTTP OK and success!==false; the 'navigated away' error proves the navigation happened",
+ "screenshot": "not captured (script crashed on reading the body); evidence/live-thanks-1280.png shows the live thanks page from the render run",
+ "email_arrived": {
+  "inbox": "warren.ekenberg@agentmail.to",
+  "from": "Query Polish intake form <notify@web3forms.com>",
+  "subject": "New Query Polish audit request",
+  "timestamp_utc": "2026-10-22T14:46:39Z",
+  "timestamp_stockholm": "2026-10-22 16:46:39 CEST",
+  "fields": {
+   "Website": "https://querypolish.com",
+   "Notes": "TEST submission by Kent Beck, please ignore.",
+   "email": "warren.ekenberg@agentmail.to",
+   "report_language": "English",
+   "Consent": "Yes"
+  },
+  "thread_id": "09de4a82-f5b1-43bb-8b0b-bf67942cf558",
+  "labels": [
+   "received",
+   "unread"
+  ]
+ }
+}

@@ -1,0 +1,128 @@
+PASS / @360px dpr1: status 200
+PASS / @360px: stylesheet applied (subpath assets resolve)
+PASS / @360px dpr1: no horizontal overflow (360)
+PASS /thanks/ @360px dpr1: status 200
+PASS /thanks/ @360px: stylesheet applied (subpath assets resolve)
+PASS /thanks/ @360px dpr1: no horizontal overflow (360)
+PASS /privacy/ @360px dpr1: status 200
+PASS /privacy/ @360px: stylesheet applied (subpath assets resolve)
+PASS /privacy/ @360px dpr1: no horizontal overflow (360)
+PASS /no-such-page/ @360px dpr1: status 404
+PASS /no-such-page/ @360px: stylesheet applied (subpath assets resolve)
+PASS /no-such-page/ @360px dpr1: no horizontal overflow (360)
+PASS @360px dpr1: no console errors/warnings (expected 404 doc on /no-such-page/ excluded) []
+PASS / @390px dpr1: status 200
+PASS / @390px: stylesheet applied (subpath assets resolve)
+PASS / @390px dpr1: no horizontal overflow (390)
+PASS /thanks/ @390px dpr1: status 200
+PASS /thanks/ @390px: stylesheet applied (subpath assets resolve)
+PASS /thanks/ @390px dpr1: no horizontal overflow (390)
+PASS /privacy/ @390px dpr1: status 200
+PASS /privacy/ @390px: stylesheet applied (subpath assets resolve)
+PASS /privacy/ @390px dpr1: no horizontal overflow (390)
+PASS /no-such-page/ @390px dpr1: status 404
+PASS /no-such-page/ @390px: stylesheet applied (subpath assets resolve)
+PASS /no-such-page/ @390px dpr1: no horizontal overflow (390)
+PASS @390px dpr1: no console errors/warnings (expected 404 doc on /no-such-page/ excluded) []
+PASS / @390px dpr2: status 200
+PASS / @390px: stylesheet applied (subpath assets resolve)
+PASS / @390px dpr2: no horizontal overflow (390)
+PASS /thanks/ @390px dpr2: status 200
+PASS /thanks/ @390px: stylesheet applied (subpath assets resolve)
+PASS /thanks/ @390px dpr2: no horizontal overflow (390)
+PASS /privacy/ @390px dpr2: status 200
+PASS /privacy/ @390px: stylesheet applied (subpath assets resolve)
+PASS /privacy/ @390px dpr2: no horizontal overflow (390)
+PASS /no-such-page/ @390px dpr2: status 404
+PASS /no-such-page/ @390px: stylesheet applied (subpath assets resolve)
+PASS /no-such-page/ @390px dpr2: no horizontal overflow (390)
+PASS @390px dpr2: no console errors/warnings (expected 404 doc on /no-such-page/ excluded) []
+PASS / @1280px dpr1: status 200
+PASS / @1280px: stylesheet applied (subpath assets resolve)
+PASS / @1280px dpr1: no horizontal overflow (1280)
+PASS /: test banner visible
+PASS /: meta robots noindex, nofollow
+PASS /: no canonical to querypolish.com
+PASS /thanks/ @1280px dpr1: status 200
+PASS /thanks/ @1280px: stylesheet applied (subpath assets resolve)
+PASS /thanks/ @1280px dpr1: no horizontal overflow (1280)
+PASS /thanks/: test banner visible
+PASS /thanks/: meta robots noindex, nofollow
+PASS /thanks/: no canonical to querypolish.com
+PASS /privacy/ @1280px dpr1: status 200
+PASS /privacy/ @1280px: stylesheet applied (subpath assets resolve)
+PASS /privacy/ @1280px dpr1: no horizontal overflow (1280)
+PASS /privacy/: test banner visible
+PASS /privacy/: meta robots noindex, nofollow
+PASS /privacy/: no canonical to querypolish.com
+PASS /no-such-page/ @1280px dpr1: status 404
+PASS /no-such-page/ @1280px: stylesheet applied (subpath assets resolve)
+PASS /no-such-page/ @1280px dpr1: no horizontal overflow (1280)
+PASS /no-such-page/: test banner visible
+PASS /no-such-page/: meta robots noindex, nofollow
+PASS /no-such-page/: no canonical to querypolish.com
+PASS @1280px dpr1: no console errors/warnings (expected 404 doc on /no-such-page/ excluded) []
+PASS / @1280px dpr2: status 200
+PASS / @1280px: stylesheet applied (subpath assets resolve)
+PASS / @1280px dpr2: no horizontal overflow (1280)
+PASS /thanks/ @1280px dpr2: status 200
+PASS /thanks/ @1280px: stylesheet applied (subpath assets resolve)
+PASS /thanks/ @1280px dpr2: no horizontal overflow (1280)
+PASS /privacy/ @1280px dpr2: status 200
+PASS /privacy/ @1280px: stylesheet applied (subpath assets resolve)
+PASS /privacy/ @1280px dpr2: no horizontal overflow (1280)
+PASS /no-such-page/ @1280px dpr2: status 404
+PASS /no-such-page/ @1280px: stylesheet applied (subpath assets resolve)
+PASS /no-such-page/ @1280px dpr2: no horizontal overflow (1280)
+PASS @1280px dpr2: no console errors/warnings (expected 404 doc on /no-such-page/ excluded) []
+PASS robots.txt: 200 Disallow: /
+PASS sitemap.xml removed (404)
+PASS no CNAME file served
+PASS required fields = ['Consent', 'Website', 'email'] (Website, email, Consent)
+PASS types: url, email, checkbox
+PASS no password/login fields
+PASS branching question removed
+PASS report language defaults to English
+PASS hidden: key unchanged, redirect=https://auberga-oak.github.io/querypolish-site/thanks/
+PASS footer names Finansium AB
+PASS empty submit blocked, invalid=['Consent', 'Website', 'email']
+PASS status message shown on invalid
+PASS focus moved to first invalid field (Website)
+PASS invalid website URL blocks submit
+PASS invalid email blocks submit
+PASS missing consent blocks submit
+PASS valid submit fires exactly 1 backend request (intercepted + aborted)
+PASS payload: Website, email, Consent=Yes, report_language=English
+PASS payload: key, redirect, honeypot unchecked
+PASS aborted -> error shown, stays on page
+PASS mocked success -> thanks/ under the subpath
+PASS thanks page says we will email the report
+PASS JS off @360px: no horizontal overflow (360)
+PASS JS off @390px: no horizontal overflow (390)
+PASS JS off: empty submit blocked by native validation
+PASS JS off: native POST to Web3Forms, redirect to github.io thanks/ (aborted)
+PASS JS off: payload fields correct
+PASS JS off @1280px: no horizontal overflow (1280)
+PASS /: anchor #main exists
+PASS /: anchor #audit exists
+PASS /: anchor #audit exists
+PASS /: no root-absolute paths outside /querypolish-site/ []
+PASS /thanks/: anchor #main exists
+PASS /thanks/: no root-absolute paths outside /querypolish-site/ []
+PASS /privacy/: anchor #main exists
+PASS /privacy/: no root-absolute paths outside /querypolish-site/ []
+PASS /no-such-page/: anchor #main exists
+PASS /no-such-page/: no root-absolute paths outside /querypolish-site/ []
+PASS contrast: 81 text nodes, min 4.61:1 ("placeholder:https://"), failures []
+PASS internal link https://auberga-oak.github.io/querypolish-site/ -> 200
+PASS internal link https://auberga-oak.github.io/querypolish-site/#audit -> 200
+PASS internal link https://auberga-oak.github.io/querypolish-site/#main -> 200
+PASS internal link https://auberga-oak.github.io/querypolish-site/assets/style.css?v=3 -> 200
+PASS internal link https://auberga-oak.github.io/querypolish-site/favicon.svg -> 200
+PASS internal link https://auberga-oak.github.io/querypolish-site/privacy/ -> 200
+PASS internal link https://auberga-oak.github.io/querypolish-site/privacy/#main -> 200
+PASS internal link https://auberga-oak.github.io/querypolish-site/thanks/#main -> 200
+PASS external link https://www.imy.se/ -> 200
+PASS no request left the site origin during tests: []
+
+SUMMARY: 126 pass, 0 fail

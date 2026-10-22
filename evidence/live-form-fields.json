@@ -1,0 +1,57 @@
+[
+ {
+  "n": "access_key",
+  "t": "hidden",
+  "r": false
+ },
+ {
+  "n": "subject",
+  "t": "hidden",
+  "r": false
+ },
+ {
+  "n": "from_name",
+  "t": "hidden",
+  "r": false
+ },
+ {
+  "n": "redirect",
+  "t": "hidden",
+  "r": false
+ },
+ {
+  "n": "botcheck",
+  "t": "checkbox",
+  "r": false
+ },
+ {
+  "n": "Website",
+  "t": "url",
+  "r": true
+ },
+ {
+  "n": "Notes",
+  "t": "textarea",
+  "r": false
+ },
+ {
+  "n": "email",
+  "t": "email",
+  "r": true
+ },
+ {
+  "n": "report_language",
+  "t": "radio",
+  "r": false
+ },
+ {
+  "n": "report_language",
+  "t": "radio",
+  "r": false
+ },
+ {
+  "n": "Consent",
+  "t": "checkbox",
+  "r": true
+ }
+]
