@@ -8,7 +8,7 @@
   "page": "/"
  },
  {
-  "text": "ExampleCo is invented. This is what it l",
+  "text": "ExampleCo is invented. This is the kind ",
   "fg": "rgb(79, 95, 102)",
   "bg": "rgb(247, 248, 246)",
   "ratio": 6.24,
@@ -64,7 +64,7 @@
   "page": "/privacy/"
  },
  {
-  "text": "Google",
+  "text": "Read",
   "fg": "rgb(79, 95, 102)",
   "bg": "rgb(255, 255, 255)",
   "ratio": 6.64,
@@ -72,7 +72,7 @@
   "page": "/"
  },
  {
-  "text": "ChatGPT",
+  "text": "Found",
   "fg": "rgb(79, 95, 102)",
   "bg": "rgb(255, 255, 255)",
   "ratio": 6.64,
@@ -80,15 +80,7 @@
   "page": "/"
  },
  {
-  "text": "Perplexity",
-  "fg": "rgb(79, 95, 102)",
-  "bg": "rgb(255, 255, 255)",
-  "ratio": 6.64,
-  "large": false,
-  "page": "/"
- },
- {
-  "text": "Google AI Overviews",
+  "text": "Ready to mention",
   "fg": "rgb(79, 95, 102)",
   "bg": "rgb(255, 255, 255)",
   "ratio": 6.64,
@@ -118,5 +110,13 @@
   "ratio": 6.7,
   "large": false,
   "page": "/"
+ },
+ {
+  "text": "henrik.ekenberg@finansium.se",
+  "fg": "rgb(31, 95, 115)",
+  "bg": "rgb(247, 248, 246)",
+  "ratio": 6.7,
+  "large": false,
+  "page": "/thanks/"
  }
 ]

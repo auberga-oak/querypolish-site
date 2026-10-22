@@ -59,6 +59,13 @@ with sync_playwright() as pw:
                     ok('contact@' not in src,f'{path}: no contact@ address')
                     ok(not re.search(r'not for (shops|restaurants)|inte för butiker',txt,re.I),f'{path}: no "not for shops or restaurants"')
                     ok(not re.search(r'every (week)?day|varje vardag|daily change',txt,re.I),f'{path}: no daily-change subscription wording')
+                    ok('12 months' not in txt and 'stores nothing' not in txt.lower(),f'{path}: no "12 months" / "stores nothing"')
+                    ok(not re.search(r'\bwe\b[^.]{0,30}\b(put|ask|check|test|run)\b[^.]{0,60}\b(ChatGPT|Perplexity|AI Overviews|AI tools?)|answers? (mention|name|include)s?\b|whether the answers|does the (AI )?answer',txt,re.I),f'{path}: no claim that we check AI answers')
+                    ok('keeps it for 30 days' not in txt,f'{path}: no unverified 30-day retention claim')
+                    ok(len(re.findall(r'reads? (every|the) report',txt,re.I))<=1,f'{path}: report review mentioned at most once')
+                    ok('?' not in p.title() and all('?' not in h for h in p.eval_on_selector_all('h1,h2,h3','e=>e.map(x=>x.innerText)')),f'{path}: no question mark in title or headings')
+                    ok(p.eval_on_selector_all('script[src]','e=>e.map(x=>new URL(x.src).origin)')in([],[p.evaluate('location.origin')]),f'{path}: only same-origin scripts (no hCaptcha/analytics)')
+                    ok(p.evaluate('document.cookie')=='' and ctx.cookies()==[],f'{path}: no cookies set')
             ok(not errs,f'@{w}px dpr{dpr}: no console errors/warnings (expected 404 doc on /no-such-page/ excluded) {errs}')
             ctx.close()
     # robots.txt, sitemap, CNAME
@@ -83,6 +90,12 @@ with sync_playwright() as pw:
     ok('Finansium AB' in p.locator('footer').inner_text(),'footer names Finansium AB')
     ok(p.locator('#intake a[href^="mailto:"]').count()==0 and p.eval_on_selector('#intake','f=>f.action')=='https://api.web3forms.com/submit' and p.eval_on_selector('#intake','f=>f.method')=='post','form: no mailto, posts to Web3Forms')
     if p.locator('.example').count(): ok('ExampleCo is invented' in p.inner_text('.example'),'example section labelled as invented')
+    if 'copy-ai' in os.environ.get('QP_EXPECT',''):
+        t=p.inner_text('body')
+        ok(t.count('Henrik reads every report before it is sent.')==1,'home: "Henrik reads every report before it is sent." exactly once')
+        ok('add us as a user in Google Search Console and Google Analytics. You never share a password.' in t,'home: Zinsser GSC/GA4 line')
+        ok('This page uses no cookies or analytics.' in t,'home: storage line present')
+        ok('Your Google Business Profile, if we can find one: categories,' in t,'home: Zinsser GBP edit')
     posts=[]
     def backend(route): posts.append(route.request.post_data); route.abort()
     p.route('https://api.web3forms.com/**',backend)
