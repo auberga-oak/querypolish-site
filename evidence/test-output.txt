@@ -56,7 +56,7 @@ PASS invalid email blocks submit
 PASS missing competitor 2 domain blocks submit
 PASS valid submit fires exactly 1 backend request (aborted)
 PASS payload carries every required value + consent
-PASS payload has placeholder key, honeypot unchecked
+FAIL payload has placeholder key, honeypot unchecked
 PASS aborted request -> error shown, stays on page: Something went wrong and your details were not sent. Please try again in a few minutes.
 PASS mocked success -> /thanks/
 PASS thanks page says we will email the report
@@ -77,4 +77,4 @@ PASS internal link http://127.0.0.1:28765/privacy/#main -> 200
 PASS internal link http://127.0.0.1:28765/thanks/#main -> 200
 PASS no request left the box during page loads: []
 
-SUMMARY: 78 pass, 0 fail
+SUMMARY: 77 pass, 1 fail
