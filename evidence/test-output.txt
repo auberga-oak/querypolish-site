@@ -51,6 +51,7 @@ PASS /: no "stores nothing" / no retention range
 PASS /: no claim that we check AI answers
 PASS /: no unverified 30-day retention claim
 PASS /: report review mentioned at most once
+PASS /: no "Henrik reads" anywhere in served HTML (text, meta, JSON-LD)
 PASS /: no question mark in title or headings
 PASS /: only same-origin scripts (no hCaptcha/analytics)
 PASS /: no cookies set
@@ -68,6 +69,7 @@ PASS /thanks/: no "stores nothing" / no retention range
 PASS /thanks/: no claim that we check AI answers
 PASS /thanks/: no unverified 30-day retention claim
 PASS /thanks/: report review mentioned at most once
+PASS /thanks/: no "Henrik reads" anywhere in served HTML (text, meta, JSON-LD)
 PASS /thanks/: no question mark in title or headings
 PASS /thanks/: only same-origin scripts (no hCaptcha/analytics)
 PASS /thanks/: no cookies set
@@ -85,6 +87,7 @@ PASS /privacy/: no "stores nothing" / no retention range
 PASS /privacy/: no claim that we check AI answers
 PASS /privacy/: no unverified 30-day retention claim
 PASS /privacy/: report review mentioned at most once
+PASS /privacy/: no "Henrik reads" anywhere in served HTML (text, meta, JSON-LD)
 PASS /privacy/: no question mark in title or headings
 PASS /privacy/: only same-origin scripts (no hCaptcha/analytics)
 PASS /privacy/: no cookies set
@@ -102,6 +105,7 @@ PASS /no-such-page/: no "stores nothing" / no retention range
 PASS /no-such-page/: no claim that we check AI answers
 PASS /no-such-page/: no unverified 30-day retention claim
 PASS /no-such-page/: report review mentioned at most once
+PASS /no-such-page/: no "Henrik reads" anywhere in served HTML (text, meta, JSON-LD)
 PASS /no-such-page/: no question mark in title or headings
 PASS /no-such-page/: only same-origin scripts (no hCaptcha/analytics)
 PASS /no-such-page/: no cookies set
@@ -119,6 +123,7 @@ PASS /no-such-page/ @1280px dpr2: status 404
 PASS /no-such-page/ @1280px: stylesheet applied (subpath assets resolve)
 PASS /no-such-page/ @1280px dpr2: no horizontal overflow (1280)
 PASS @1280px dpr2: no console errors/warnings (expected 404 doc on /no-such-page/ excluded) []
+PASS docs/: no "Henrik reads" in any file []
 PASS robots.txt: 200 Disallow: /
 PASS sitemap.xml removed (404)
 PASS no CNAME file served
@@ -131,7 +136,8 @@ PASS hidden: key unchanged, redirect=https://auberga-oak.github.io/querypolish-s
 PASS footer names Finansium AB
 PASS form: no mailto, posts to Web3Forms
 PASS example section labelled as invented
-PASS home: "Henrik reads every report before it is sent." exactly once
+PASS home: "A Finansium SEO expert reads every report before it is sent." exactly once
+PASS home: no "Henrik reads"
 PASS home: Zinsser GSC/GA4 line
 PASS home: storage line present
 PASS home: Zinsser GBP edit
@@ -166,16 +172,16 @@ PASS /privacy/: no root-absolute paths outside /querypolish-site/ []
 PASS /no-such-page/: anchor #main exists
 PASS /no-such-page/: no root-absolute paths outside /querypolish-site/ []
 PASS contrast: 101 text nodes, min 4.61:1 ("placeholder:https://"), failures []
-PASS internal link http://127.0.0.1:28771/querypolish-site/ -> 200
-PASS internal link http://127.0.0.1:28771/querypolish-site/#audit -> 200
-PASS internal link http://127.0.0.1:28771/querypolish-site/#main -> 200
-PASS internal link http://127.0.0.1:28771/querypolish-site/assets/style.css?v=3 -> 200
-PASS internal link http://127.0.0.1:28771/querypolish-site/assets/style.css?v=4 -> 200
-PASS internal link http://127.0.0.1:28771/querypolish-site/favicon.svg -> 200
-PASS internal link http://127.0.0.1:28771/querypolish-site/privacy/ -> 200
-PASS internal link http://127.0.0.1:28771/querypolish-site/privacy/#main -> 200
-PASS internal link http://127.0.0.1:28771/querypolish-site/thanks/#main -> 200
+PASS internal link http://127.0.0.1:28772/querypolish-site/ -> 200
+PASS internal link http://127.0.0.1:28772/querypolish-site/#audit -> 200
+PASS internal link http://127.0.0.1:28772/querypolish-site/#main -> 200
+PASS internal link http://127.0.0.1:28772/querypolish-site/assets/style.css?v=3 -> 200
+PASS internal link http://127.0.0.1:28772/querypolish-site/assets/style.css?v=4 -> 200
+PASS internal link http://127.0.0.1:28772/querypolish-site/favicon.svg -> 200
+PASS internal link http://127.0.0.1:28772/querypolish-site/privacy/ -> 200
+PASS internal link http://127.0.0.1:28772/querypolish-site/privacy/#main -> 200
+PASS internal link http://127.0.0.1:28772/querypolish-site/thanks/#main -> 200
 PASS external link https://www.imy.se/ -> 200
 PASS no request left the site origin during tests: []
 
-SUMMARY: 179 pass, 0 fail
+SUMMARY: 185 pass, 0 fail

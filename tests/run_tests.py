@@ -64,11 +64,20 @@ with sync_playwright() as pw:
                     ok(not re.search(r'\bwe\b[^.]{0,30}\b(put|ask|check|test|run)\b[^.]{0,60}\b(ChatGPT|Perplexity|AI Overviews|AI tools?)|answers? (mention|name|include)s?\b|whether the answers|does the (AI )?answer',txt,re.I),f'{path}: no claim that we check AI answers')
                     ok('keeps it for 30 days' not in txt,f'{path}: no unverified 30-day retention claim')
                     ok(len(re.findall(r'reads? (every|the) report',txt,re.I))<=1,f'{path}: report review mentioned at most once')
+                    ok('henrik reads' not in src.lower(),f'{path}: no "Henrik reads" anywhere in served HTML (text, meta, JSON-LD)')
                     ok('?' not in p.title() and all('?' not in h for h in p.eval_on_selector_all('h1,h2,h3','e=>e.map(x=>x.innerText)')),f'{path}: no question mark in title or headings')
                     ok(p.eval_on_selector_all('script[src]','e=>e.map(x=>new URL(x.src).origin)')in([],[p.evaluate('location.origin')]),f'{path}: only same-origin scripts (no hCaptcha/analytics)')
                     ok(p.evaluate('document.cookie')=='' and ctx.cookies()==[],f'{path}: no cookies set')
             ok(not errs,f'@{w}px dpr{dpr}: no console errors/warnings (expected 404 doc on /no-such-page/ excluded) {errs}')
             ctx.close()
+    if not LIVE:
+        _d=os.path.join(os.path.dirname(os.path.abspath(__file__)),'..','docs'); _hits=[]
+        for _r,_ds,_fs in os.walk(_d):
+            for _f in _fs:
+                try: _t=open(os.path.join(_r,_f),encoding='utf-8').read()
+                except Exception: continue
+                if 'henrik reads' in _t.lower(): _hits.append(os.path.relpath(os.path.join(_r,_f),_d))
+        ok(not _hits,f'docs/: no "Henrik reads" in any file {_hits}')
     # robots.txt, sitemap, CNAME
     def fetch(u):
         try: r=urllib.request.urlopen(u,timeout=20); return r.status,r.read().decode('utf-8','replace')
@@ -93,7 +102,8 @@ with sync_playwright() as pw:
     if p.locator('.example').count(): ok('ExampleCo is invented' in p.inner_text('.example'),'example section labelled as invented')
     if 'copy-ai' in os.environ.get('QP_EXPECT',''):
         t=p.inner_text('body')
-        ok(t.count('Henrik reads every report before it is sent.')==1,'home: "Henrik reads every report before it is sent." exactly once')
+        ok(t.count('A Finansium SEO expert reads every report before it is sent. Then we email it to the address you give us.')==1,'home: "A Finansium SEO expert reads every report before it is sent." exactly once')
+        ok('Henrik reads' not in t,'home: no "Henrik reads"')
         ok('add us as a user in Google Search Console and Google Analytics. You never share a password.' in t,'home: Zinsser GSC/GA4 line')
         ok('This page uses no cookies or analytics.' in t,'home: storage line present')
         ok('Your Google Business Profile, if we can find one: categories,' in t,'home: Zinsser GBP edit')

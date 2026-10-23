@@ -1,11 +1,11 @@
 ==================== docs/index.html
 TITLE: Query Polish: a free audit of how Google and AI tools read your site
-META DESCRIPTION: Your customers ask ChatGPT, Perplexity, Google AI Overviews and Google. A free audit of whether they can read and find your website. The report comes by email.
+META DESCRIPTION: Your customers ask ChatGPT, Perplexity, Google AI Overviews and Google which business to choose. This free audit checks whether those tools can read and find your website. The report comes by email.
 Test version. This site is being tested and isn't open for requests yet. Skip to content 
 Query PolishRequest the audit   
 
 # Your customers ask AI. Make sure it can read your site. 
-People ask ChatGPT, Perplexity, Google AI Overviews and Google which business to choose. These tools answer from what they can read. Our free audit shows what to change on your website and Google Business Profile so Google, and the crawlers AI tools send, can read and find you. 
+People ask ChatGPT, Perplexity, Google AI Overviews and Google which business to choose. Those answers lean on pages the tools can read. Our free audit shows what to change on your website and Google Business Profile so Google, and the crawlers AI tools send, can read and find you. 
 Request the audit   
 
 ## An example 
@@ -28,7 +28,7 @@ example.com/emergency
 Google and AI tools answer from what they can read. The audit looks at the website you already have and checks three things.  
 - Read. Can Google, and the crawlers that AI tools send, see every page you already have? 
 - Found. When a customer searches, does the right page come up on Google? Two of your pages shouldn't compete for the same search. 
-- Ready to mention. Does each page say plainly, in text, who you are, what you do and where? We can't control what an AI tool says. We can make your site easy to read and quote.  
+- Ready to mention. Does each page say plainly, in text, who you are, what you do and where? We can't control what an AI tool says, but we can make your site easy to read and quote.  
 It also covers:  
 - Your Google Business Profile, if we can find one: categories, attributes, services, description, photos and posts, set against what your competitors do. If you don't have a profile yet, the report starts with how to set one up. 
 - Your Google reviews (if you have a profile): how many you have, how often new ones come in, what customers mention, and how your competitors' reviews differ. 
@@ -39,11 +39,11 @@ Each finding comes with a suggested fix and a note on how much it's likely to ma
 ## How it works  
 - Fill in the form below. You only need to give us your website and your email address. 
 - We look at public information: your profile if you have one, your website, and your closest competitors. 
-- Henrik reads every report before it is sent. Then we email it to the address you give us.  
+- A Finansium SEO expert reads every report before it is sent. Then we email it to the address you give us.  
 We never ask for passwords or logins. The audit uses only what you tell us and what anyone can see on Google and on the web. If you want more work after the report, we may ask you to add us as a user in Google Search Console and Google Analytics. You never share a password.   
 
 ## Privacy 
-We use what you send only to prepare your audit and email it to you. We don't sell it, share it for marketing, or add you to a mailing list. You can ask us to delete it at any time. The privacy note has the details. This page uses no cookies or analytics. What you send in the form reaches us through Web3Forms, which keeps it for the period set for our form: between 7 days and 3 years on its free plan.   
+We use what you send only to prepare your audit and email it to you. We don't sell it, share it for marketing, or add you to a mailing list. You can ask us to delete it at any time. The privacy note has the details. This page uses no cookies or analytics. What you send in the form reaches us through Web3Forms, which keeps it for 1 year and then deletes it.   
 
 ## Request your free audit 
 Fields marked * are required.  
@@ -93,8 +93,8 @@ Query PolishRequest the audit
 Who is responsible. Finansium AB is the data controller for Query Polish. Contact: henrik.ekenberg@finansium.se. 
 What we collect. What you type into the audit form: your website address, your email address, the language you want the report in, and anything else you choose to tell us. We never ask for passwords or logins. 
 Why. Only to prepare your audit and email the report to you. The legal basis is your consent, which you give by ticking the box on the form. We don't sell your information, share it for marketing, or add you to a mailing list. 
-Who processes it. Web3Forms (web3forms.com) receives the form and forwards it to us by email, as our data processor. Web3Forms keeps it for the period set for our form: between 7 days and 3 years on its free plan. 
-How long. You can ask us to delete your information at any time. 
+Who processes it. Web3Forms (web3forms.com) receives the form and forwards it to us by email, as our data processor. Web3Forms keeps it for 1 year and then deletes it. 
+How long. We keep your answers and the report for 12 months after we send it, then delete them. You can ask us to delete them sooner. 
 Your rights. You can ask to see, correct or delete your information by emailing the address above. If you think we've handled it wrongly, you can complain to the Swedish Authority for Privacy Protection (IMY), imy.se. 
 Last updated 22 October 2026. 
 Back to Query Polish   
