@@ -1,3 +1,4 @@
+import pathlib
 """Query Polish test-deploy checks. Local: QP_PORT=28765 python3 run_tests.py   Live: QP_BASE=https://auberga-oak.github.io/querypolish-site python3 run_tests.py
 Every request leaving the site origin is aborted; the Web3Forms request is intercepted (aborted or answered by a local mock). Nothing is sent."""
 import json, re, sys, os, threading, http.server, socketserver, urllib.request
@@ -54,6 +55,18 @@ with sync_playwright() as pw:
                     ok(p.locator('.testbanner').inner_text().strip()==BANNER and p.locator('.testbanner').is_visible(),f'{path}: test banner visible')
                     ok(p.eval_on_selector_all('meta[name=robots]','e=>e.map(x=>x.content)')==['noindex, nofollow'],f'{path}: meta robots noindex, nofollow')
                     ok(p.locator('link[rel=canonical]').count()==0,f'{path}: no canonical to querypolish.com')
+                    txt=p.inner_text('body'); src=p.content()
+                    ok(not re.search(r'10[\s\u00a0.,]?000|\bkr\b|/\s*month|per month',txt,re.I),f'{path}: no price / subscription text')
+                    ok('contact@' not in src,f'{path}: no contact@ address')
+                    ok(not re.search(r'not for (shops|restaurants)|inte för butiker',txt,re.I),f'{path}: no "not for shops or restaurants"')
+                    ok(not re.search(r'every (week)?day|varje vardag|daily change',txt,re.I),f'{path}: no daily-change subscription wording')
+                    ok('stores nothing' not in txt.lower() and '7 days and 3 years' not in txt,f'{path}: no "stores nothing" / no retention range')
+                    ok(not re.search(r'\bwe\b[^.]{0,30}\b(put|ask|check|test|run)\b[^.]{0,60}\b(ChatGPT|Perplexity|AI Overviews|AI tools?)|answers? (mention|name|include)s?\b|whether the answers|does the (AI )?answer',txt,re.I),f'{path}: no claim that we check AI answers')
+                    ok('keeps it for 30 days' not in txt,f'{path}: no unverified 30-day retention claim')
+                    ok(len(re.findall(r'reads? (every|the) report',txt,re.I))<=1,f'{path}: report review mentioned at most once')
+                    ok('?' not in p.title() and all('?' not in h for h in p.eval_on_selector_all('h1,h2,h3','e=>e.map(x=>x.innerText)')),f'{path}: no question mark in title or headings')
+                    ok(p.eval_on_selector_all('script[src]','e=>e.map(x=>new URL(x.src).origin)')in([],[p.evaluate('location.origin')]),f'{path}: only same-origin scripts (no hCaptcha/analytics)')
+                    ok(p.evaluate('document.cookie')=='' and ctx.cookies()==[],f'{path}: no cookies set')
             ok(not errs,f'@{w}px dpr{dpr}: no console errors/warnings (expected 404 doc on /no-such-page/ excluded) {errs}')
             ctx.close()
     # robots.txt, sitemap, CNAME
@@ -76,6 +89,17 @@ with sync_playwright() as pw:
     hid={n['n']:p.eval_on_selector(f'input[type=hidden][name="{n["n"]}"]','e=>e.value') for n in names if n['t']=='hidden'}
     ok(hid.get('access_key')==KEY and hid.get('redirect')==REDIRECT,f'hidden: key unchanged, redirect={hid.get("redirect")}')
     ok('Finansium AB' in p.locator('footer').inner_text(),'footer names Finansium AB')
+    ok(p.locator('#intake a[href^="mailto:"]').count()==0 and p.eval_on_selector('#intake','f=>f.action')=='https://api.web3forms.com/submit' and p.eval_on_selector('#intake','f=>f.method')=='post','form: no mailto, posts to Web3Forms')
+    if p.locator('.example').count(): ok('ExampleCo is invented' in p.inner_text('.example'),'example section labelled as invented')
+    if 'copy-ai' in os.environ.get('QP_EXPECT',''):
+        t=p.inner_text('body')
+        ok(t.count('Henrik reads every report before it is sent.')==1,'home: "Henrik reads every report before it is sent." exactly once')
+        ok('add us as a user in Google Search Console and Google Analytics. You never share a password.' in t,'home: Zinsser GSC/GA4 line')
+        ok('This page uses no cookies or analytics.' in t,'home: storage line present')
+        ok('Your Google Business Profile, if we can find one: categories,' in t,'home: Zinsser GBP edit')
+        ok('Web3Forms, which keeps it for 1 year and then deletes it.' in t,'home: Web3Forms retention 1 year')
+        pv=pathlib.Path(__file__).resolve().parent.parent.joinpath('docs/privacy/index.html').read_text()
+        ok('Web3Forms keeps it for 1 year and then deletes it.' in pv and 'We keep your answers and the report for 12 months after we send it, then delete them.' in pv,'privacy: Web3Forms 1 year + our 12 months')
     posts=[]
     def backend(route): posts.append(route.request.post_data); route.abort()
     p.route('https://api.web3forms.com/**',backend)

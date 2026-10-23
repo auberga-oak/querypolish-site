@@ -1,0 +1,181 @@
+PASS / @360px dpr1: status 200
+PASS / @360px: stylesheet applied (subpath assets resolve)
+PASS / @360px dpr1: no horizontal overflow (360)
+PASS /thanks/ @360px dpr1: status 200
+PASS /thanks/ @360px: stylesheet applied (subpath assets resolve)
+PASS /thanks/ @360px dpr1: no horizontal overflow (360)
+PASS /privacy/ @360px dpr1: status 200
+PASS /privacy/ @360px: stylesheet applied (subpath assets resolve)
+PASS /privacy/ @360px dpr1: no horizontal overflow (360)
+PASS /no-such-page/ @360px dpr1: status 404
+PASS /no-such-page/ @360px: stylesheet applied (subpath assets resolve)
+PASS /no-such-page/ @360px dpr1: no horizontal overflow (360)
+PASS @360px dpr1: no console errors/warnings (expected 404 doc on /no-such-page/ excluded) []
+PASS / @390px dpr1: status 200
+PASS / @390px: stylesheet applied (subpath assets resolve)
+PASS / @390px dpr1: no horizontal overflow (390)
+PASS /thanks/ @390px dpr1: status 200
+PASS /thanks/ @390px: stylesheet applied (subpath assets resolve)
+PASS /thanks/ @390px dpr1: no horizontal overflow (390)
+PASS /privacy/ @390px dpr1: status 200
+PASS /privacy/ @390px: stylesheet applied (subpath assets resolve)
+PASS /privacy/ @390px dpr1: no horizontal overflow (390)
+PASS /no-such-page/ @390px dpr1: status 404
+PASS /no-such-page/ @390px: stylesheet applied (subpath assets resolve)
+PASS /no-such-page/ @390px dpr1: no horizontal overflow (390)
+PASS @390px dpr1: no console errors/warnings (expected 404 doc on /no-such-page/ excluded) []
+PASS / @390px dpr2: status 200
+PASS / @390px: stylesheet applied (subpath assets resolve)
+PASS / @390px dpr2: no horizontal overflow (390)
+PASS /thanks/ @390px dpr2: status 200
+PASS /thanks/ @390px: stylesheet applied (subpath assets resolve)
+PASS /thanks/ @390px dpr2: no horizontal overflow (390)
+PASS /privacy/ @390px dpr2: status 200
+PASS /privacy/ @390px: stylesheet applied (subpath assets resolve)
+PASS /privacy/ @390px dpr2: no horizontal overflow (390)
+PASS /no-such-page/ @390px dpr2: status 404
+PASS /no-such-page/ @390px: stylesheet applied (subpath assets resolve)
+PASS /no-such-page/ @390px dpr2: no horizontal overflow (390)
+PASS @390px dpr2: no console errors/warnings (expected 404 doc on /no-such-page/ excluded) []
+PASS / @1280px dpr1: status 200
+PASS / @1280px: stylesheet applied (subpath assets resolve)
+PASS / @1280px dpr1: no horizontal overflow (1280)
+PASS /: test banner visible
+PASS /: meta robots noindex, nofollow
+PASS /: no canonical to querypolish.com
+PASS /: no price / subscription text
+PASS /: no contact@ address
+PASS /: no "not for shops or restaurants"
+PASS /: no daily-change subscription wording
+PASS /: no "stores nothing" / no retention range
+PASS /: no claim that we check AI answers
+PASS /: no unverified 30-day retention claim
+PASS /: report review mentioned at most once
+PASS /: no question mark in title or headings
+PASS /: only same-origin scripts (no hCaptcha/analytics)
+PASS /: no cookies set
+PASS /thanks/ @1280px dpr1: status 200
+PASS /thanks/ @1280px: stylesheet applied (subpath assets resolve)
+PASS /thanks/ @1280px dpr1: no horizontal overflow (1280)
+PASS /thanks/: test banner visible
+PASS /thanks/: meta robots noindex, nofollow
+PASS /thanks/: no canonical to querypolish.com
+PASS /thanks/: no price / subscription text
+PASS /thanks/: no contact@ address
+PASS /thanks/: no "not for shops or restaurants"
+PASS /thanks/: no daily-change subscription wording
+PASS /thanks/: no "stores nothing" / no retention range
+PASS /thanks/: no claim that we check AI answers
+PASS /thanks/: no unverified 30-day retention claim
+PASS /thanks/: report review mentioned at most once
+PASS /thanks/: no question mark in title or headings
+PASS /thanks/: only same-origin scripts (no hCaptcha/analytics)
+PASS /thanks/: no cookies set
+PASS /privacy/ @1280px dpr1: status 200
+PASS /privacy/ @1280px: stylesheet applied (subpath assets resolve)
+PASS /privacy/ @1280px dpr1: no horizontal overflow (1280)
+PASS /privacy/: test banner visible
+PASS /privacy/: meta robots noindex, nofollow
+PASS /privacy/: no canonical to querypolish.com
+PASS /privacy/: no price / subscription text
+PASS /privacy/: no contact@ address
+PASS /privacy/: no "not for shops or restaurants"
+PASS /privacy/: no daily-change subscription wording
+PASS /privacy/: no "stores nothing" / no retention range
+PASS /privacy/: no claim that we check AI answers
+PASS /privacy/: no unverified 30-day retention claim
+PASS /privacy/: report review mentioned at most once
+PASS /privacy/: no question mark in title or headings
+PASS /privacy/: only same-origin scripts (no hCaptcha/analytics)
+PASS /privacy/: no cookies set
+PASS /no-such-page/ @1280px dpr1: status 404
+PASS /no-such-page/ @1280px: stylesheet applied (subpath assets resolve)
+PASS /no-such-page/ @1280px dpr1: no horizontal overflow (1280)
+PASS /no-such-page/: test banner visible
+PASS /no-such-page/: meta robots noindex, nofollow
+PASS /no-such-page/: no canonical to querypolish.com
+PASS /no-such-page/: no price / subscription text
+PASS /no-such-page/: no contact@ address
+PASS /no-such-page/: no "not for shops or restaurants"
+PASS /no-such-page/: no daily-change subscription wording
+PASS /no-such-page/: no "stores nothing" / no retention range
+PASS /no-such-page/: no claim that we check AI answers
+PASS /no-such-page/: no unverified 30-day retention claim
+PASS /no-such-page/: report review mentioned at most once
+PASS /no-such-page/: no question mark in title or headings
+PASS /no-such-page/: only same-origin scripts (no hCaptcha/analytics)
+PASS /no-such-page/: no cookies set
+PASS @1280px dpr1: no console errors/warnings (expected 404 doc on /no-such-page/ excluded) []
+PASS / @1280px dpr2: status 200
+PASS / @1280px: stylesheet applied (subpath assets resolve)
+PASS / @1280px dpr2: no horizontal overflow (1280)
+PASS /thanks/ @1280px dpr2: status 200
+PASS /thanks/ @1280px: stylesheet applied (subpath assets resolve)
+PASS /thanks/ @1280px dpr2: no horizontal overflow (1280)
+PASS /privacy/ @1280px dpr2: status 200
+PASS /privacy/ @1280px: stylesheet applied (subpath assets resolve)
+PASS /privacy/ @1280px dpr2: no horizontal overflow (1280)
+PASS /no-such-page/ @1280px dpr2: status 404
+PASS /no-such-page/ @1280px: stylesheet applied (subpath assets resolve)
+PASS /no-such-page/ @1280px dpr2: no horizontal overflow (1280)
+PASS @1280px dpr2: no console errors/warnings (expected 404 doc on /no-such-page/ excluded) []
+PASS robots.txt: 200 Disallow: /
+PASS sitemap.xml removed (404)
+PASS no CNAME file served
+PASS required fields = ['Consent', 'Website', 'email'] (Website, email, Consent)
+PASS types: url, email, checkbox
+PASS no password/login fields
+PASS branching question removed
+PASS report language defaults to English
+PASS hidden: key unchanged, redirect=https://auberga-oak.github.io/querypolish-site/thanks/
+PASS footer names Finansium AB
+PASS form: no mailto, posts to Web3Forms
+PASS example section labelled as invented
+PASS home: "Henrik reads every report before it is sent." exactly once
+PASS home: Zinsser GSC/GA4 line
+PASS home: storage line present
+PASS home: Zinsser GBP edit
+PASS home: Web3Forms retention 1 year
+PASS privacy: Web3Forms 1 year + our 12 months
+PASS empty submit blocked, invalid=['Consent', 'Website', 'email']
+PASS status message shown on invalid
+PASS focus moved to first invalid field (Website)
+PASS invalid website URL blocks submit
+PASS invalid email blocks submit
+PASS missing consent blocks submit
+PASS valid submit fires exactly 1 backend request (intercepted + aborted)
+PASS payload: Website, email, Consent=Yes, report_language=English
+PASS payload: key, redirect, honeypot unchecked
+PASS aborted -> error shown, stays on page
+PASS mocked success -> thanks/ under the subpath
+PASS thanks page says we will email the report
+PASS JS off @360px: no horizontal overflow (360)
+PASS JS off @390px: no horizontal overflow (390)
+PASS JS off: empty submit blocked by native validation
+PASS JS off: native POST to Web3Forms, redirect to github.io thanks/ (aborted)
+PASS JS off: payload fields correct
+PASS JS off @1280px: no horizontal overflow (1280)
+PASS /: anchor #main exists
+PASS /: anchor #audit exists
+PASS /: anchor #audit exists
+PASS /: no root-absolute paths outside /querypolish-site/ []
+PASS /thanks/: anchor #main exists
+PASS /thanks/: no root-absolute paths outside /querypolish-site/ []
+PASS /privacy/: anchor #main exists
+PASS /privacy/: no root-absolute paths outside /querypolish-site/ []
+PASS /no-such-page/: anchor #main exists
+PASS /no-such-page/: no root-absolute paths outside /querypolish-site/ []
+PASS contrast: 101 text nodes, min 4.61:1 ("placeholder:https://"), failures []
+PASS internal link http://127.0.0.1:28765/querypolish-site/ -> 200
+PASS internal link http://127.0.0.1:28765/querypolish-site/#audit -> 200
+PASS internal link http://127.0.0.1:28765/querypolish-site/#main -> 200
+PASS internal link http://127.0.0.1:28765/querypolish-site/assets/style.css?v=3 -> 200
+PASS internal link http://127.0.0.1:28765/querypolish-site/assets/style.css?v=4 -> 200
+PASS internal link http://127.0.0.1:28765/querypolish-site/favicon.svg -> 200
+PASS internal link http://127.0.0.1:28765/querypolish-site/privacy/ -> 200
+PASS internal link http://127.0.0.1:28765/querypolish-site/privacy/#main -> 200
+PASS internal link http://127.0.0.1:28765/querypolish-site/thanks/#main -> 200
+PASS external link https://www.imy.se/ -> 200
+PASS no request left the site origin during tests: []
+
+SUMMARY: 179 pass, 0 fail
