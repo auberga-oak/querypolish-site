@@ -8,6 +8,14 @@
   "page": "/"
  },
  {
+  "text": "ExampleCo is invented. This is the kind ",
+  "fg": "rgb(79, 95, 102)",
+  "bg": "rgb(247, 248, 246)",
+  "ratio": 6.24,
+  "large": false,
+  "page": "/"
+ },
+ {
   "text": "Fields marked",
   "fg": "rgb(79, 95, 102)",
   "bg": "rgb(247, 248, 246)",
@@ -56,6 +64,30 @@
   "page": "/privacy/"
  },
  {
+  "text": "Read",
+  "fg": "rgb(79, 95, 102)",
+  "bg": "rgb(255, 255, 255)",
+  "ratio": 6.64,
+  "large": false,
+  "page": "/"
+ },
+ {
+  "text": "Found",
+  "fg": "rgb(79, 95, 102)",
+  "bg": "rgb(255, 255, 255)",
+  "ratio": 6.64,
+  "large": false,
+  "page": "/"
+ },
+ {
+  "text": "Ready to mention",
+  "fg": "rgb(79, 95, 102)",
+  "bg": "rgb(255, 255, 255)",
+  "ratio": 6.64,
+  "large": false,
+  "page": "/"
+ },
+ {
   "text": "(optional)",
   "fg": "rgb(79, 95, 102)",
   "bg": "rgb(255, 255, 255)",
@@ -86,37 +118,5 @@
   "ratio": 6.7,
   "large": false,
   "page": "/thanks/"
- },
- {
-  "text": "Back to Query Polish",
-  "fg": "rgb(31, 95, 115)",
-  "bg": "rgb(247, 248, 246)",
-  "ratio": 6.7,
-  "large": false,
-  "page": "/thanks/"
- },
- {
-  "text": "Privacy",
-  "fg": "rgb(31, 95, 115)",
-  "bg": "rgb(247, 248, 246)",
-  "ratio": 6.7,
-  "large": false,
-  "page": "/thanks/"
- },
- {
-  "text": "henrik.ekenberg@finansium.se",
-  "fg": "rgb(31, 95, 115)",
-  "bg": "rgb(247, 248, 246)",
-  "ratio": 6.7,
-  "large": false,
-  "page": "/privacy/"
- },
- {
-  "text": "imy.se",
-  "fg": "rgb(31, 95, 115)",
-  "bg": "rgb(247, 248, 246)",
-  "ratio": 6.7,
-  "large": false,
-  "page": "/privacy/"
  }
 ]

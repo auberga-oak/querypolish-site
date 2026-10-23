@@ -37,6 +37,9 @@ Owner: Finansium AB. Engineering: Kent Beck. Updated 22 Oct 2026, 16:50 Stockhol
 - branching-v1: ffe565b, 8383563, 348cdde, b56f60e, ea93552
 - simple-test: 6dd43a7. Merged into main as **debc9be** (first deploy).
 - The README and live evidence are committed on top of debc9be (see `git log`).
+- fcf600d: README and live evidence. 4a10f26: receiving inbox address removed from tracked files; Zinsser edit "Your Google Business Profile, if we can find one: categories,". 94e96c0: README + live evidence.
+- **23 Oct 2026: copy-ai-v1 (2318b48) deployed** (Henrik approved 06:29). Merged into main as **40b4617** (merge commit; the branches had diverged, so no fast-forward). Pages build for 40b4617 finished 06:31 CEST. Tests: local 179/179, live 179/179 (`evidence/test-output.txt`, `evidence/live-test-output.txt`). Screenshots: `evidence/live-ai-home-390.png`, `evidence/live-ai-home-1280.png`.
+- **23 Oct live test submission FAILED (2 attempts, about 06:32 and 06:33:53 CEST).** Web3Forms answered the browser's CORS preflight with 403 and no Access-Control-Allow-Origin header, and a plain OPTIONS probe from the box got 403 "This method is not allowed. Use our API in client side…". It looks as if Web3Forms is treating this box's IP as a server. Nothing reached the team inbox. This needs checking from a normal browser before the form can be trusted. `evidence/live-submit-2-result.json/.png`.
 - fcf600d: README and live evidence. 4a10f26: receiving inbox address removed from tracked files; Zinsser edit "Your Google Business Profile, if we can find one: categories," (live, verified 22 Oct 16:58 CEST; live render checks 126/126).
 - Branch `copy-ai-v1` (7fcb045, local only, NOT pushed or deployed): AI-answer copy draft, see `evidence/copy-diff-ai.md` on that branch.
 

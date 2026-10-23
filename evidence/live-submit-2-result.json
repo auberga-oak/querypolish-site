@@ -1,0 +1,20 @@
+{
+ "attempt": 2,
+ "website": "https://example.com",
+ "notes": "TEST SUBMISSION by Kent Beck after copy-ai-v1 deploy, please ignore",
+ "submit_time_stockholm": "2026-10-23T06:33:53+02:00",
+ "final_url": "https://auberga-oak.github.io/querypolish-site/",
+ "landed_on_thanks": false,
+ "status_text": "Something went wrong and your details were not sent. Please try again in a few minutes.",
+ "response": {},
+ "web3forms_requests": [
+  {
+   "url": "https://api.web3forms.com/submit",
+   "method": "POST"
+  }
+ ],
+ "console": [
+  "error: Access to fetch at 'https://api.web3forms.com/submit' from origin 'https://auberga-oak.github.io' has been blocked by CORS policy: Response to preflight request doesn't pass access control check: No 'Access-Control-Allow-Origin' header is present on the requested resource.",
+  "error: Failed to load resource: net::ERR_FAILED"
+ ]
+}
