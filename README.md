@@ -1,16 +1,18 @@
-# Query Polish: TEST deploy status
+# Query Polish: PRODUCTION status
 
-Owner: Finansium AB. Engineering: Kent Beck. Updated 22 Oct 2026, 16:50 Stockholm time (CEST).
+Owner: Finansium AB. Engineering: Kent Beck. Updated 31 Oct 2026, Stockholm time (CET).
 
-## Live (test only)
-- **URL:** https://auberga-oak.github.io/querypolish-site/ (also `thanks/` and `privacy/`). GitHub Pages from `main` `/docs`, HTTPS enforced, **no custom domain** (no `docs/CNAME`).
-- Repo: https://github.com/auberga-oak/querypolish-site (public). The first Pages build (debc9be) finished at 16:36:32 CEST.
-- Every page shows a test banner ("Test version. This site is being tested and isn't open for requests yet.") and has `<meta name="robots" content="noindex, nofollow">`. `robots.txt` is `Disallow: /`, but it sits under the project subpath, so crawlers won't read it there; the meta noindex is what counts. There's no sitemap. All paths are relative except `404.html`, which needs absolute `/querypolish-site/` paths because Pages serves it at any depth.
-- querypolish.com DNS is unchanged (still Spaceship parking).
+## Live (production)
+- **Go-live approved by Henrik on 31 Oct 2026, 17:03 Stockholm time** ("Go live: Kent takes the site out of test mode and adds the domain").
+- **URL:** https://querypolish.com/ (also `/privacy/` and `/thanks/`). GitHub Pages from `main` `/docs`, custom domain set by `docs/CNAME` (`querypolish.com`) and the Pages API. `www.querypolish.com` should redirect to the apex. The old https://auberga-oak.github.io/querypolish-site/ URL redirects to the domain once it is attached.
+- Commit 2329a32: test banner and `noindex, nofollow` removed from every page. `thanks/` keeps `<meta name="robots" content="noindex">` because it is a post-submit page. `robots.txt` allows crawling and points to `https://querypolish.com/sitemap.xml`. `sitemap.xml` lists `/` and `/privacy/`, and leaves `/thanks/` out. The home page has canonical and og:url `https://querypolish.com/`, and privacy has canonical `https://querypolish.com/privacy/`. `404.html` now uses root-absolute paths (`/assets/...`), and the other pages use relative paths, which work at the root.
+- The form is open for real requests. Its no-JS redirect is `https://querypolish.com/thanks/`.
+- DNS at Spaceship follows `DNS-spaceship.md` (untracked). MX/email forwarding is not touched by this repo.
+- **Still waiting on Henrik's own browser submission**: the live form check has to come from a normal browser, because Web3Forms blocks the box's IP (403 on the CORS preflight, 23 Oct). The tests mock the backend and send nothing.
 
 ## Form
 - Required: **Website** (url) and **email**, plus the **Consent** checkbox. Optional: "Anything else you'd like us to know" (`Notes`). Report language is English by default, with Swedish as the other option. No branching, no detail fields.
-- Backend: Web3Forms, key `c9f5ef0c-dc1b-4ead-8727-fabec3abdc98` (public by design). Redirect for no-JS posts: https://auberga-oak.github.io/querypolish-site/thanks/
+- Backend: Web3Forms, key `c9f5ef0c-dc1b-4ead-8727-fabec3abdc98` (public by design). Redirect for no-JS posts: https://querypolish.com/thanks/
 
 ## Where submissions land
 - **The team's AgentMail inbox and the Web3Forms dashboard.** Mail comes from `Query Polish intake form <notify@web3forms.com>` with the subject "New Query Polish audit request". The dashboard keeps 30 days of history on the free plan.
@@ -22,6 +24,8 @@ Owner: Finansium AB. Engineering: Kent Beck. Updated 22 Oct 2026, 16:50 Stockhol
 - Record: `evidence/live-submit-result.json`.
 
 ## Tests
+- **Production (31 Oct, 2329a32):** `cd tests && QP_EXPECT=copy-ai QP_PORT=28782 python3 run_tests.py` now serves `docs/` at the root, like querypolish.com. Result: **200 pass, 0 fail** (`evidence/test-output.txt`). The live run against https://querypolish.com is recorded below once DNS and HTTPS are ready. The production checks cover: no banner, no noindex (except thanks/), robots allows crawling plus the Sitemap line, sitemap.xml, CNAME, canonical/og:url, 404 at root and at depth, the redirect URL, and that the form is open. The backend is aborted or mocked.
+- Older (test deploy, subpath):
 - `cd tests && QP_PORT=28765 python3 run_tests.py` serves `docs/` locally under `/querypolish-site/`. Result: **126 pass, 0 fail** (`evidence/test-output.txt`).
 - `QP_BASE=https://auberga-oak.github.io/querypolish-site python3 run_tests.py` runs the same checks against the live site. Result: **126 pass, 0 fail** (`evidence/live-test-output.txt`).
 - Both runs intercept the backend request (abort or a local mock), so the test runs send nothing. The test email defaults to `test@example.com` (override with `QP_TEST_EMAIL`).
