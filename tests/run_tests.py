@@ -1,10 +1,10 @@
 import pathlib
-"""Query Polish test-deploy checks. Local: QP_PORT=28765 python3 run_tests.py   Live: QP_BASE=https://auberga-oak.github.io/querypolish-site python3 run_tests.py
+"""Query Polish production checks. Local (served at root, like querypolish.com): QP_PORT=28765 python3 run_tests.py   Live: QP_BASE=https://querypolish.com python3 run_tests.py
 Every request leaving the site origin is aborted; the Web3Forms request is intercepted (aborted or answered by a local mock). Nothing is sent."""
-import json, re, sys, os, threading, http.server, socketserver, urllib.request
+import json, re, sys, os, threading, http.server, socketserver, urllib.request, urllib.error
 from urllib.parse import parse_qs
 from playwright.sync_api import sync_playwright
-SITE='/workspace/querypolish/docs'; EV='/workspace/querypolish/evidence'; PREFIX='/querypolish-site'
+SITE='/workspace/querypolish/docs'; EV='/workspace/querypolish/evidence'; PREFIX=''  # production: served at the domain root
 LIVE=os.environ.get('QP_BASE'); TAG='live-' if LIVE else ''
 if LIVE: BASE=LIVE.rstrip('/'); ORIGIN=re.match(r'https?://[^/]+',BASE).group(0)
 else:
@@ -13,7 +13,7 @@ else:
         def log_message(self,*a): pass
         def translate_path(self,path):
             p=path.split('?')[0].split('#')[0]
-            if not (p==PREFIX or p.startswith(PREFIX+'/')): return '/nonexistent'
+            if PREFIX and not (p==PREFIX or p.startswith(PREFIX+'/')): return '/nonexistent'
             return super().translate_path(path[len(PREFIX):] or '/')
         def send_error(self,code,message=None,explain=None):
             if code==404:
@@ -26,7 +26,9 @@ R={'pass':[],'fail':[]}
 def ok(c,msg): (R['pass'] if c else R['fail']).append(msg); print(('PASS ' if c else 'FAIL ')+msg)
 PAGES=['/','/thanks/','/privacy/','/no-such-page/']
 BANNER="Test version. This site is being tested and isn't open for requests yet."
-KEY='c9f5ef0c-dc1b-4ead-8727-fabec3abdc98'; REDIRECT='https://auberga-oak.github.io/querypolish-site/thanks/'
+KEY='c9f5ef0c-dc1b-4ead-8727-fabec3abdc98'; DOMAIN='https://querypolish.com'; REDIRECT=DOMAIN+'/thanks/'
+ROBOTS={'/':[],'/privacy/':[],'/thanks/':['noindex'],'/no-such-page/':[]}
+CANON={'/':DOMAIN+'/','/privacy/':DOMAIN+'/privacy/'}
 REQ={'Website','email','Consent'}
 FILL={'Website':'https://querypolish.com','email':os.environ.get('QP_TEST_EMAIL','test@example.com')}  # intercepted, never sent
 external=[]
@@ -52,10 +54,12 @@ with sync_playwright() as pw:
                 ok(p.evaluate('getComputedStyle(document.querySelector("link[rel=stylesheet]")?document.body:document.body).backgroundColor')=='rgb(247, 248, 246)',f'{path} @{w}px: stylesheet applied (subpath assets resolve)')
                 sw=p.evaluate('document.documentElement.scrollWidth'); ok(sw<=w,f'{path} @{w}px dpr{dpr}: no horizontal overflow ({sw})')
                 if w==1280 and dpr==1:
-                    ok(p.locator('.testbanner').inner_text().strip()==BANNER and p.locator('.testbanner').is_visible(),f'{path}: test banner visible')
-                    ok(p.eval_on_selector_all('meta[name=robots]','e=>e.map(x=>x.content)')==['noindex, nofollow'],f'{path}: meta robots noindex, nofollow')
-                    ok(p.locator('link[rel=canonical]').count()==0,f'{path}: no canonical to querypolish.com')
                     txt=p.inner_text('body'); src=p.content()
+                    ok(p.locator('.testbanner').count()==0 and BANNER not in txt and 'test version' not in txt.lower() and "isn't open for requests" not in txt,f'{path}: no test banner / test-mode text')
+                    ok(p.eval_on_selector_all('meta[name=robots]','e=>e.map(x=>x.content)')==ROBOTS[path],f'{path}: meta robots = {ROBOTS[path] or "none (indexable)"}')
+                    ok(p.eval_on_selector_all('link[rel=canonical]','e=>e.map(x=>x.getAttribute("href"))')==([CANON[path]] if path in CANON else []),f'{path}: canonical = {CANON.get(path,"none")}')
+                    ok(p.eval_on_selector_all('meta[property="og:url"]','e=>e.map(x=>x.content)')==([DOMAIN+'/'] if path=='/' else []),f'{path}: og:url = {DOMAIN+"/" if path=="/" else "none"}')
+                    ok('querypolish-site' not in src and 'github.io' not in src,f'{path}: no github.io / /querypolish-site/ references')
                     ok(not re.search(r'10[\s\u00a0.,]?000|\bkr\b|/\s*month|per month',txt,re.I),f'{path}: no price / subscription text')
                     ok('contact@' not in src,f'{path}: no contact@ address')
                     ok(not re.search(r'not for (shops|restaurants)|inte för butiker',txt,re.I),f'{path}: no "not for shops or restaurants"')
@@ -81,10 +85,19 @@ with sync_playwright() as pw:
     # robots.txt, sitemap, CNAME
     def fetch(u):
         try: r=urllib.request.urlopen(u,timeout=20); return r.status,r.read().decode('utf-8','replace')
-        except Exception as e: return getattr(e,'code',str(e)),''
-    st,body=fetch(BASE+'/robots.txt'); ok(st==200 and 'Disallow: /' in body,f'robots.txt: {st} Disallow: /')
-    ok(fetch(BASE+'/sitemap.xml')[0]==404,'sitemap.xml removed (404)')
-    ok(fetch(BASE+'/CNAME')[0]==404,'no CNAME file served')
+        except urllib.error.HTTPError as e: return e.code,e.read().decode('utf-8','replace')
+        except Exception as e: return str(e),''
+    st,body=fetch(BASE+'/robots.txt'); lines=[l.strip() for l in body.splitlines()]
+    ok(st==200 and 'User-agent: *' in lines and 'Allow: /' in lines and not any(l.startswith('Disallow:') and l!='Disallow:' for l in lines),f'robots.txt: {st}, allows crawling')
+    ok(f'Sitemap: {DOMAIN}/sitemap.xml' in lines,'robots.txt: Sitemap line')
+    st,body=fetch(BASE+'/sitemap.xml'); locs=re.findall(r'<loc>([^<]+)</loc>',body)
+    ok(st==200 and body.lstrip().startswith('<?xml') and locs==[DOMAIN+'/',DOMAIN+'/privacy/'],f'sitemap.xml: {st}, locs={locs} (thanks/ left out: post-submit page)')
+    cn=pathlib.Path(SITE,'CNAME').read_text().strip(); ok(cn=='querypolish.com',f'docs/CNAME = {cn!r}')
+    st,body=fetch(BASE+'/CNAME'); ok(st==200 and body.strip()=='querypolish.com' or (LIVE and st==404),f'served /CNAME: {st} {body.strip()!r}')
+    for deep in ('/no-such-page/','/a/b/c/missing.html'):
+        st,body=fetch(BASE+deep); refs=re.findall(r'(?:href|src)="(/[^"]*)"',body)
+        ok(st==404 and 'Page not found' in body and refs and all(not r.startswith('/querypolish-site') for r in refs),f'404 at {deep}: {st}, root-absolute refs {sorted(set(refs))}')
+        ok(all(fetch(BASE+r.split('#')[0])[0]==200 for r in set(refs)),f'404 at {deep}: every root-absolute ref resolves 200')
     # 2. form structure + validation (JS on)
     ctx=b.new_context(viewport={'width':1280,'height':800}); ctx.route('**/*',guard); p=ctx.new_page(); p.goto(BASE+'/')
     names=p.eval_on_selector_all('#intake [name]','els=>els.map(e=>({n:e.name,t:e.type,r:e.required}))')
@@ -98,6 +111,7 @@ with sync_playwright() as pw:
     hid={n['n']:p.eval_on_selector(f'input[type=hidden][name="{n["n"]}"]','e=>e.value') for n in names if n['t']=='hidden'}
     ok(hid.get('access_key')==KEY and hid.get('redirect')==REDIRECT,f'hidden: key unchanged, redirect={hid.get("redirect")}')
     ok('Finansium AB' in p.locator('footer').inner_text(),'footer names Finansium AB')
+    ok(p.eval_on_selector('#submit','e=>!e.disabled') and p.locator('#intake [disabled]').count()==0,'form open: submit enabled, no disabled fields')
     ok(p.locator('#intake a[href^="mailto:"]').count()==0 and p.eval_on_selector('#intake','f=>f.action')=='https://api.web3forms.com/submit' and p.eval_on_selector('#intake','f=>f.method')=='post','form: no mailto, posts to Web3Forms')
     if p.locator('.example').count(): ok('ExampleCo is invented' in p.inner_text('.example'),'example section labelled as invented')
     if 'copy-ai' in os.environ.get('QP_EXPECT',''):
@@ -136,7 +150,7 @@ with sync_playwright() as pw:
     def mock(route): posts2.append(1); route.fulfill(status=200,content_type='application/json',body='{"success":true,"message":"mock"}')
     p.route('https://api.web3forms.com/**',mock)
     p.click('#submit'); p.wait_for_url(BASE+'/thanks/',timeout=8000)
-    ok(p.url==BASE+'/thanks/' and len(posts2)==1,'mocked success -> thanks/ under the subpath')
+    ok(p.url==BASE+'/thanks/' and len(posts2)==1,'mocked success -> /thanks/ at the root')
     ok("We'll email the report" in p.inner_text('main'),'thanks page says we will email the report')
     ctx.close()
     # 3. JS off
@@ -161,7 +175,7 @@ with sync_playwright() as pw:
             p.wait_for_timeout(500)
             q=parse_qs(nat[0][2] or '',keep_blank_values=True) if nat else {}
             json.dump(q,open(f'{EV}/{TAG}payload-nojs.json','w'),indent=1)
-            ok(len(nat)==1 and nat[0][1]=='POST' and q.get('redirect')==[REDIRECT],'JS off: native POST to Web3Forms, redirect to github.io thanks/ (aborted)')
+            ok(len(nat)==1 and nat[0][1]=='POST' and q.get('redirect')==[REDIRECT],f'JS off: native POST to Web3Forms, redirect={REDIRECT} (aborted)')
             ok(q.get('Website')==[FILL['Website']] and q.get('email')==[FILL['email']] and q.get('Consent')==['Yes'] and q.get('report_language')==['English'],'JS off: payload fields correct')
         ctx.close()
     # 4. contrast + links
@@ -174,8 +188,8 @@ with sync_playwright() as pw:
         links|=set(p.eval_on_selector_all('link[href]','as=>as.map(a=>a.href)'))
         for frag in p.eval_on_selector_all('a[href^="#"]','as=>as.map(a=>a.getAttribute("href").slice(1))'):
             ok(frag=='' or p.locator('#'+frag).count()==1,f'{path}: anchor #{frag} exists')
-        bad=p.eval_on_selector_all('a[href],link[href],script[src]',f'els=>els.map(e=>e.getAttribute("href")||e.getAttribute("src")).filter(h=>h.startsWith("/")&&!h.startsWith("{PREFIX}/"))')
-        ok(not bad,f'{path}: no root-absolute paths outside {PREFIX}/ {bad}')
+        bad=p.eval_on_selector_all('a[href],link[href],script[src]','els=>els.map(e=>e.getAttribute("href")||e.getAttribute("src")).filter(h=>h.startsWith("/querypolish-site"))')
+        ok(not bad,f'{path}: no /querypolish-site/ paths {bad}')
     json.dump(sorted(allc,key=lambda r:r['ratio'])[:15],open(f'{EV}/{TAG}contrast-lowest.json','w'),indent=1)
     low=[r for r in allc if r['ratio']<(3 if r['large'] else 4.5)]; mn=min(allc,key=lambda r:r['ratio'])
     ok(not low,f'contrast: {len(allc)} text nodes, min {mn["ratio"]:.2f}:1 ("{mn["text"][:30]}"), failures {low[:3]}')
@@ -186,6 +200,7 @@ with sync_playwright() as pw:
             c=fetch(l.split('#')[0])[0]; ok(c==200,f'internal link {l} -> {c}')
         else: ext.append(l)
     for l in ext:
+        if not LIVE and l.startswith(DOMAIN+'/'): continue  # canonical/og targets on the production domain: checked as internal links in the live run
         if l.startswith('http'): c=fetch(l)[0]; ok(c==200,f'external link {l} -> {c}')
     json.dump(ext,open(f'{EV}/{TAG}external-links.json','w'))
     ok(not external,f'no request left the site origin during tests: {sorted(set(external))}')
