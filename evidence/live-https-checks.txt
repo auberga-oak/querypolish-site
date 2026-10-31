@@ -1,0 +1,17 @@
+# querypolish.com HTTPS checks, 2026-10-31 18:56 CET
+subject=CN=querypolish.com
+issuer=C=US, O=Let's Encrypt, CN=YR2
+X509v3 Subject Alternative Name: 
+    DNS:querypolish.com, DNS:www.querypolish.com
+notBefore=Oct 31 16:55:53 2026 GMT
+notAfter=Jan 29 16:55:52 2027 GMT
+{"cname":"querypolish.com","https_certificate":{"description":"The certificate has been approved.","domains":["querypolish.com","www.querypolish.com"],"expires_at":"2027-01-29","state":"approved"},"https_enforced":true,"status":"built"}
+https://querypolish.com/ -> 200 
+  followed: 200 final=https://querypolish.com/
+https://www.querypolish.com/ -> 301 https://querypolish.com/
+  followed: 200 final=https://querypolish.com/
+https://auberga-oak.github.io/querypolish-site/ -> 301 https://querypolish.com/
+  followed: 200 final=https://querypolish.com/
+http (via api.hackertarget.com/httpheaders; box has no port 80):
+http://querypolish.com/ -> HTTP/1.1 301 Moved Permanently Location: https://querypolish.com/ HTTP/1.1 200 OK 
+http://www.querypolish.com/ -> HTTP/1.1 301 Moved Permanently Location: https://querypolish.com/ HTTP/1.1 200 OK 
